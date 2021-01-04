@@ -1,25 +1,28 @@
 import styled from 'styled-components'
 
+const Container = styled.div`
+    border-radius: 8px;
+    background-color: ${(props) => props.theme.CARD_BACKGROUND};
+    height: ${(props) => props.height}px;
+    width: ${(props) => props.width}px;
+    padding: ${(props) => props.padding}px;
+    margin: 0 auto;
+`
 function Card (props) {
-    const { 
-        theme, 
+    const {
+        theme,
         children,
         height,
         width,
-        padding 
+        padding
     } = props
 
-    const Container = styled.div`
-        border-radius: 8px;
-        background-color: ${theme.CARD_BACKGROUND};
-        height: ${height}px;
-        width: ${width}px;
-        padding: ${padding}px;
-        margin: 0 auto;
-    `
-
     return (
-        <Container>
+        <Container
+            theme={theme}
+            height={height}
+            width={width}
+            padding={padding}>
             {children}
         </Container>
     )

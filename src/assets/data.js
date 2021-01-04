@@ -211,5 +211,15 @@ export const PROJECTS = [
         links: {
             'github': 'https://github.com/dchen150/Pomodoro'
         }
+    },
+    {
+        name: 'Personal Website',
+        icon: null,
+        subHeader: 'web app',
+        description: 'made with love :)',
+        tags: ['JavaScript', 'React', 'HTML', 'CSS'],
+        links: {
+            'github': 'https://github.com/dchen150/portfolio'
+        }
     }
 ]

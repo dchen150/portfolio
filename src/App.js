@@ -6,6 +6,7 @@ import { LIGHT, DARK, COLOR } from './constants/theme'
 import Intro from './components/intro'
 import Experience from './components/experience'
 import Project from './components/project'
+import Credit from './components/credit'
 import { EXPERIENCES } from './assets/data'
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
     <div>
       <div style={{ display: 'flex', float: 'right', margin: '10px' }}>
         <Icon style={iconStyle} name='sun' size='large' />
-        <Switch 
+        <Switch
           onChange={handleChange}
           checked={isDark}
           onColor={COLOR.GREEN}
@@ -43,6 +44,7 @@ function App() {
       <Intro theme={isDark ? DARK : LIGHT} />
       <Experience theme={isDark ? DARK : LIGHT} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
       <Project theme={isDark ? DARK : LIGHT} />
+      <Credit theme={isDark ? DARK : LIGHT} />
     </div>
   )
 }
