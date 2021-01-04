@@ -66,6 +66,10 @@ export const CONTACT = [
     {
         iconName: 'instagram',
         link: 'https://www.instagram.com/drekchen_/'
+    },
+    {
+        iconName: 'envelope',
+        link: 'mailto:derekc150@gmail.com'
     }
 ]
 

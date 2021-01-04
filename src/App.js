@@ -1,25 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, lazy, Suspense } from 'react'
 import Switch from "react-switch"
 import { Icon } from 'semantic-ui-react'
+import StyledContentLoader from 'styled-content-loader'
 
 import { LIGHT, DARK, COLOR } from './constants/theme'
-import Intro from './components/intro'
-import Experience from './components/experience'
-import Project from './components/project'
-import Credit from './components/credit'
 import { EXPERIENCES } from './assets/data'
+import Credit from './components/credit'
+const Intro = lazy(() => import('./components/intro'))
+const Experience = lazy(() => import('./components/experience'))
+const Project = lazy(() => import('./components/project'))
 
 function App() {
   const [isDark, setIsDark] = useState(true)
-
-  document.body.style = `background: ${isDark ? DARK.BACKGROUND : LIGHT.BACKGROUND}`
+  const theme = isDark ? DARK : LIGHT
+  document.body.style = `background: ${theme.BACKGROUND}`
 
   const handleChange = () => {
     setIsDark(!isDark)
   }
 
   const iconStyle = {
-    color: isDark ? DARK.SUBHEADER : LIGHT.SUBHEADER
+    color: theme.SUBHEADER
+  }
+
+  const ContentLoader = () => {
+    return (
+      <StyledContentLoader backgroundColor={theme.SIDE_BAR_BACKGROUND} foreGroundColor={theme.CARD_BACKGROUND}>
+        <div style={{ width: '700px', height: '200px', margin: '0 auto', marginBottom: '20px', borderRadius: '8px'}}></div>
+      </StyledContentLoader>
+    )
   }
 
   return (
@@ -41,10 +50,20 @@ function App() {
         />
         <Icon style={iconStyle} name='moon' size='large' />
       </div>
-      <Intro theme={isDark ? DARK : LIGHT} />
-      <Experience theme={isDark ? DARK : LIGHT} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
-      <Project theme={isDark ? DARK : LIGHT} />
-      <Credit theme={isDark ? DARK : LIGHT} />
+      <Suspense fallback={<ContentLoader />}>
+        <Intro theme={theme} />
+      </Suspense>
+
+      <Suspense fallback={<ContentLoader />}>
+      <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
+      </Suspense>
+
+      <Suspense fallback={<ContentLoader />}>
+        <Project theme={theme} />
+      </Suspense>
+
+      <Credit theme={theme} />
+
     </div>
   )
 }
