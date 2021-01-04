@@ -84,6 +84,8 @@ const ListItem = styled.li`
     color: ${(props) => props.theme.TEXT}
 `
 
+const doubleSlash = '//'
+
 function Experience (props) {
     const { theme, experiences, header } = props
     const [currExperience, setCurrExperience] = useState(experiences[0])
@@ -114,7 +116,7 @@ function Experience (props) {
                             <Logo alt={currExperience.company} src={theme === DARK ? currExperience.dark : currExperience.light} />
                             <HeaderContainer>
                                 <Header theme={theme}>{currExperience.company}</Header>
-                                <Position theme={theme}>{currExperience.time} // {currExperience.title}</Position>
+                                <Position theme={theme}>{currExperience.time} {doubleSlash} {currExperience.title}</Position>
                             </HeaderContainer>
                         </FlexBox>
                         <ul>
