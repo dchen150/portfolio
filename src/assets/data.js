@@ -50,7 +50,7 @@ export const BIO_INFO = {
     'interests': [
         'keyboards',
         'pc builds',
-        'music'
+        'music (piano & ukulele)'
     ]
 }
 
