@@ -82,7 +82,7 @@ export const EXPERIENCES = [
         description: ['i just started'],
         light: HuaweiLight,
         dark: HuaweiDark,
-        tags: ['C++']
+        tags: ['C++', 'NGINX', 'YANG']
     },
     {
         title: 'Developer (Volunteer)',
@@ -147,7 +147,7 @@ export const PROJECTS = [
         name: 'first hello',
         icon: 'trophy',
         subHeader: 'hackathon winner // mobile app',
-        description: 'first hello is a project I built with a team of 4 peers at nwHacks 2020, Western Canada\'s largest hackathon (24 hrs). My team was awared the Best use of Google Cloud award and the Wolfram award. \n\n The mobile app aims to bring conversations with new people to a more relaxed and conversational level. The app registers people\'s face and personal information (e.g. interests, hobbies, pronouns) into Firebase Storage and Firebase FireStore (given their consent!), which is then compared to a real time camera for facial verification via the Microsoft Azure Face API . If any of the faces on the screen match one of the faces in the data base, an elegant rendering of the user\'s information is displayed on the screen so that you can learn about that person\'s passions and interests!',
+        description: 'first hello is a project I built with a team of 4 peers at nwHacks 2020, Western Canada\'s largest hackathon (24 hrs). My team was awarded the Best use of Google Cloud award and the Wolfram award. \n\n The mobile app aims to bring conversations with new people to a more relaxed and conversational level. The app registers people\'s face and personal information (e.g. interests, hobbies, pronouns) into Firebase Storage and Firebase FireStore (given their consent!), which is then compared to a real time camera for facial verification via the Microsoft Azure Face API . If any of the faces on the screen match one of the faces in the data base, an elegant rendering of the user\'s information is displayed on the screen so that you can learn about that person\'s passions and interests!',
         tags: ['Firebase', 'Azure', 'Java', 'Android Studio', 'XML'],
         links: {
             'github': 'https://github.com/dchen150/first-hello',
