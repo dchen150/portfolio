@@ -82,7 +82,7 @@ export const EXPERIENCES = [
         description: ['i just started'],
         light: HuaweiLight,
         dark: HuaweiDark,
-        tags: ['C++', 'NGINX', 'YANG']
+        tags: ['Python', 'NGINX', 'YANG']
     },
     {
         title: 'Developer (Volunteer)',
@@ -144,7 +144,19 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
     {
-        name: 'first hello',
+        name: 'Wish a Dish [Hack the North 2020]',
+        icon: null,
+        subHeader: 'mobile app // voiceflow assistant',
+        description: 'Wish a Dish is a 2 part project - a mobile app and Google Assistant App. Using the mobile app, users can keep track of what groceries/ingredients they have by adding via 1 of the 3 following methods: upload a photo of the food, upload a photo of a receipt of groceries, or upload by text. \n\n Users can then speak to their Google Assistant (powered by Voiceflow) and specify their dietary restrictions, which will then figure out a few recipes that you can make with whatever ingredients you currently have. This recipe is uploaded to a Firestore database which updates to the mobile app in real time - the user can then follow along with their Google Assistant or mobile app to whip up a delicious dish!',
+        tags: ['Firestore', 'Vision API', 'Firebase Functions', 'flutter', 'dart', 'Voiceflow'],
+        links: {
+            'github': 'https://github.com/dchen150/recipe-suggester',
+            'linkify': 'https://devpost.com/software/wish-a-dish-m9eshg',
+            'youtube': 'https://www.youtube.com/watch?v=Eo_uqGk7HHk'
+        }
+    },
+    {
+        name: 'first hello  [nwHacks 2019]',
         icon: 'trophy',
         subHeader: 'hackathon winner // mobile app',
         description: 'first hello is a project I built with a team of 4 peers at nwHacks 2020, Western Canada\'s largest hackathon (24 hrs). My team was awarded the Best use of Google Cloud award and the Wolfram award. \n\n The mobile app aims to bring conversations with new people to a more relaxed and conversational level. The app registers people\'s face and personal information (e.g. interests, hobbies, pronouns) into Firebase Storage and Firebase FireStore (given their consent!), which is then compared to a real time camera for facial verification via the Microsoft Azure Face API . If any of the faces on the screen match one of the faces in the data base, an elegant rendering of the user\'s information is displayed on the screen so that you can learn about that person\'s passions and interests!',
@@ -166,9 +178,9 @@ export const PROJECTS = [
         }
     },
     {
-        name: 'ChatrMaps',
+        name: 'ChatrMaps [LHD 2019]',
         icon: null,
-        subHeader: 'hackathon // web app',
+        subHeader: 'web app',
         description: 'ChatrMaps is a web app developed at UBC\'s Local Hack Day 2019 (12 hours). In a team of 4, we developed a convenient chatroom app that allows users to create and join chatrooms based on geolocation anonymously. The aim of the project is to increase inclusivity for people at events! \n\nI primarily implemented the Scaledrone chatroom and the interface that allows users to see who else is in the room. I also contributed in integrating the Google Maps API.',
         tags: ['JavaScript', 'React', 'Redux', 'Scaledrone', 'Google Maps API'],
         links: {
@@ -196,9 +208,9 @@ export const PROJECTS = [
         }
     },
     {
-        name: 'Context',
+        name: 'Context [nwHacks 2018]',
         icon: null,
-        subHeader: 'hackathon // web app',
+        subHeader: 'web app',
         description: 'In a group of 4, developed an app that stores and compiles typed notes to generate an elegant rendering with additional functionality. Primarily worked front end - designing the UI with CSS3 and HTML5. Implemented methods to parse user\'s document and identify previously defined words.',
         tags: ['JavaScript', 'React', 'HTML5', 'CSS3'],
         links: {
