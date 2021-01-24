@@ -85,33 +85,6 @@ export const EXPERIENCES = [
         tags: ['Python', 'NGINX', 'YANG']
     },
     {
-        title: 'Developer (Volunteer)',
-        company: 'nwPlus',
-        time: 'May 2020 - present',
-        location: 'Vancouver, Canada',
-        description: [
-            'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal using React, yarn, and Firebase Storage/Firestore',
-            'Implemented a pipeline by writing scripts on Github Actions and Travis CI/CD that reduced regression'
-        ],
-        light: nwPlusDark,
-        dark: nwPlusDark,
-        tags: ['JavaScript', 'React', 'Redux', 'Firebase', 'Github Actions']
-    },
-    {
-        title: 'Developer Lead (Volunteer)',
-        company: 'BizTech',
-        time: 'Sept 2019 - present',
-        location: 'Vancouver, Canada',
-        description: [
-            'Managing a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
-            'Created a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
-            'Implemented infrastructure tools using React, Redux, JavaScript, and Node.js that allows executives to manage and create events 30% more efficiently'
-        ],
-        light: BizTech,
-        dark: BizTechDark,
-        tags: ['JavaScript', 'React', 'Redux', 'AWS', 'Severless', 'DynamoDB']
-    },
-    {
         title: 'Agile Developer Intern',
         company: 'SAP',
         time: 'May 2020 - Dec 2020',
@@ -139,6 +112,37 @@ export const EXPERIENCES = [
         light: UBC,
         dark: UBCDark,
         tags: ['Java', 'SOLID', 'Design Principles']
+    }
+]
+
+export const COMMUNITY_PROJECTS = [
+
+    {
+        title: 'Developer (Volunteer)',
+        company: 'nwPlus',
+        time: 'May 2020 - present',
+        location: 'Vancouver, Canada',
+        description: [
+            'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal using React, yarn, and Firebase Storage/Firestore',
+            'Implemented a pipeline by writing scripts on Github Actions and Travis CI/CD that reduced regression'
+        ],
+        light: nwPlusDark,
+        dark: nwPlusDark,
+        tags: ['JavaScript', 'React', 'Redux', 'Firebase', 'Github Actions']
+    },
+    {
+        title: 'Developer Lead (Volunteer)',
+        company: 'BizTech',
+        time: 'Sept 2019 - present',
+        location: 'Vancouver, Canada',
+        description: [
+            'Managing a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
+            'Created a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
+            'Implemented infrastructure tools using React, Redux, JavaScript, and Node.js that allows executives to manage and create events 30% more efficiently'
+        ],
+        light: BizTech,
+        dark: BizTechDark,
+        tags: ['JavaScript', 'React', 'Redux', 'AWS', 'Severless', 'DynamoDB']
     }
 ]
 

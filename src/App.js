@@ -4,7 +4,7 @@ import { Icon } from 'semantic-ui-react'
 import StyledContentLoader from 'styled-content-loader'
 
 import { LIGHT, DARK, COLOR } from './constants/theme'
-import { EXPERIENCES } from './assets/data'
+import { EXPERIENCES, COMMUNITY_PROJECTS } from './assets/data'
 import Credit from './components/credit'
 const Intro = lazy(() => import('./components/intro'))
 const Experience = lazy(() => import('./components/experience'))
@@ -55,7 +55,11 @@ function App() {
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
-      <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
+        <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
+      </Suspense>
+
+      <Suspense fallback={<ContentLoader />}>
+        <Experience theme={theme} experiences={COMMUNITY_PROJECTS} header={'Community Projects'} />
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
