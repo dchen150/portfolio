@@ -8,7 +8,7 @@ import Resume from '../assets/Derek_Chen_Resume.pdf'
 import { COLOR } from '../constants/theme'
 import Loop from './loop'
 import Card from './card'
- 
+
 const Container = styled.div`
     padding: 45px 30px 10px 30px;
 `
@@ -81,7 +81,7 @@ function Intro (props) {
                         })
                     }
                 </FlexBox>
-                <ReactJson 
+                <ReactJson
                     src={BIO_INFO}
                     theme='monokai'
                     name={false}

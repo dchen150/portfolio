@@ -79,7 +79,10 @@ export const EXPERIENCES = [
         company: 'Huawei',
         time: 'Jan 2021 - present',
         location: 'Vancouver, Canada',
-        description: ['i just started'],
+        description: [
+            'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend',
+            'Implementing Python flask REST API that converts YANG data model to XML, JSON, and C++'
+        ],
         light: HuaweiLight,
         dark: HuaweiDark,
         tags: ['Python', 'NGINX', 'YANG']
