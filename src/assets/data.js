@@ -151,6 +151,18 @@ export const COMMUNITY_PROJECTS = [
 
 export const PROJECTS = [
     {
+        name: 'Mr. Goose [DeltaHacks VII]',
+        icon: null,
+        subHeader: 'chrome extension',
+        description: 'Mr. Goose is a chrome extension that detects any article/text that you have highlighted and searches the web for \"dummified\" explanations of the concept you are trying to learn. \n\n The backend deployed on Firebase Functions uses Google Langauge Natural Language Processing to determine what the article is about. Search queries are then called on sources such as Reddit, Wikipedia, and StackOverflow - searching for \"dummified\" explanations that have the most upvotes or are verified to be a correct answer.',
+        tags: ['Google Language NLP', 'Firebase Functions', 'JavaScript', 'HTML', 'CSS'],
+        links: {
+            'github': 'https://github.com/dchen150/ELI5-chrome-extension',
+            'linkify': 'https://devpost.com/software/mr-goose-qhe1vk?ref_content=user-portfolio&ref_feature=in_progress',
+            'youtube': 'https://www.youtube.com/watch?v=-DDr-ZiCAsc'
+        }
+    },
+    {
         name: 'Wish a Dish [Hack the North 2020]',
         icon: null,
         subHeader: 'mobile app // voiceflow assistant',
