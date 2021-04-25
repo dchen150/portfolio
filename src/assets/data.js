@@ -208,14 +208,6 @@ export const PROJECTS = [
         }
     },
     {
-        name: 'UBC Course Query Engine',
-        icon: null,
-        subHeader: 'pc app',
-        description: 'Built a query engine that supports its own syntax for searching for UBC courses based on average, number of seats, and several other fields. Developed REST API to communicate with UBC backend to grab course info.',
-        tags: ['TypeScript', 'REST'],
-        links: {}
-    },
-    {
         name: 'Fitness Log',
         icon: null,
         subHeader: 'android app',
@@ -235,16 +227,6 @@ export const PROJECTS = [
         links: {
             'github': 'https://github.com/dchen150/context',
             'linkify': 'https://vyzw.github.io/context/'
-        }
-    },
-    {
-        name: 'Pomodoro',
-        icon: null,
-        subHeader: 'pc app',
-        description: 'Developed an app inspired by the Pomodoro time management strategy, which allows users to organize projects and tasks, along with respective due date, priority, and tags. Designed robust code by implementing exceptions, try/catch statements, and using design patterns. Implemented data persistence using a JSON folder that is written to and read from efficiently.',
-        tags: ['Java', 'JavaFX'],
-        links: {
-            'github': 'https://github.com/dchen150/Pomodoro'
         }
     },
     {
