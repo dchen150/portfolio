@@ -4,6 +4,7 @@ import HuaweiLight from './huawei.png'
 import SAP from './sap.png'
 
 import Orbis from './orbis.png'
+import OrbisDark from './orbisDark.png'
 
 import UBC from './ubc.png'
 import UBCDark from './ubcDark.png'
@@ -83,7 +84,7 @@ export const EXPERIENCES = [
         location: 'Vancouver, Canada',
         description: ['Orbis Portfolio Systems'],
         light: Orbis,
-        dark: Orbis,
+        dark: OrbisDark,
         tags: ['C#']
     },
     {
