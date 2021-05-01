@@ -11,7 +11,7 @@ const Experience = lazy(() => import('./components/experience'))
 const Project = lazy(() => import('./components/project'))
 
 function App() {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
   const theme = isDark ? DARK : LIGHT
   document.body.style = `background: ${theme.BACKGROUND}`
 

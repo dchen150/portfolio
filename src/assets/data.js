@@ -3,6 +3,8 @@ import HuaweiLight from './huawei.png'
 
 import SAP from './sap.png'
 
+import Orbis from './orbis.png'
+
 import UBC from './ubc.png'
 import UBCDark from './ubcDark.png'
 
@@ -75,17 +77,28 @@ export const CONTACT = [
 
 export const EXPERIENCES = [
     {
+        title: 'Software Developer Intern',
+        company: 'Orbis Investments',
+        time: 'May 2021 - present',
+        location: 'Vancouver, Canada',
+        description: ['Orbis Portfolio Systems'],
+        light: Orbis,
+        dark: Orbis,
+        tags: ['C#']
+    },
+    {
         title: 'Software Engineer Intern',
         company: 'Huawei',
-        time: 'Jan 2021 - present',
+        time: 'Jan 2021 - Apr 2021',
         location: 'Vancouver, Canada',
         description: [
-            'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend',
-            'Implementing Python flask REST API that converts YANG data model to XML, JSON, and C++'
+            'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
+            'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend which increased traffic flow efficiency by 23%',
+            'Implemented REST APIs that convert YANG data model to XML, JSON, and Java'
         ],
         light: HuaweiLight,
         dark: HuaweiDark,
-        tags: ['Python', 'NGINX', 'YANG']
+        tags: ['Python', 'Java', 'Maven', 'Flask', 'Spring', 'NGINX', 'YANG']
     },
     {
         title: 'Agile Developer Intern',
@@ -93,9 +106,9 @@ export const EXPERIENCES = [
         time: 'May 2020 - Dec 2020',
         location: 'Vancouver, Canada',
         description: [
-            'Worked on HANA & Analytics - User Management, Licensing, Core UI',
+            'HANA & Analytics - User Management, Licensing, Core UI',
             'Reduced runtime of external facing REST API by 30% by optimizing backend logic',
-            'Designed and implemented data pipeline using Apache Airflow for workflow management',
+            'Designed and implemented data pipeline using Apache Airflow & Python for workflow management of more than 1 million users/clients',
             'Led the overhaul and redesign of regression autmoation tests written using Python, Selenium, and Jenkins which improved consistency by 80%',
             'Increased reliability in unit tests by mocking database calls and refactoring JavaScript production code'
         ],
@@ -139,6 +152,7 @@ export const COMMUNITY_PROJECTS = [
         time: 'Sept 2019 - present',
         location: 'Vancouver, Canada',
         description: [
+            'Collaborated with stakeholders to optimize project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
             'Managing a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
             'Created a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
             'Implemented infrastructure tools using React, Redux, JavaScript, and Node.js that allows executives to manage and create events 30% more efficiently'
