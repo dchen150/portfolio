@@ -47,14 +47,19 @@ export const BIO_INFO = {
         'badminton',
         'hiking',
         'skiing',
-        'video games',
         'videography/photography'
     ],
     'interests': [
         'keyboards',
         'pc builds',
         'music (piano & ukulele)'
-    ]
+    ],
+    'video games': {
+        'Valorant': 'Diamond 1',
+        'League of Legends': 'Platinum 4',
+        'Brawlhalla': 'Diamond 1',
+        'Brawlhalla Kung Foot': 'Top 20 in US West'
+    }
 }
 
 export const CONTACT = [
