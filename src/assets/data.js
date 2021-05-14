@@ -35,7 +35,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'SWE intern @ huawei | ubc cs\' 22',
+    'bio': 'SWE intern @ Orbis Investments | ubc cs\' 22',
     'location': 'Vancouver, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
@@ -45,6 +45,7 @@ export const BIO_INFO = {
     },
     'hobbies': [
         'badminton',
+        'spikeball',
         'hiking',
         'skiing',
         'videography/photography'
@@ -90,7 +91,7 @@ export const EXPERIENCES = [
         description: ['Orbis Portfolio Systems'],
         light: Orbis,
         dark: OrbisDark,
-        tags: ['C#']
+        tags: ['C#', 'SQL', '.NET Core']
     },
     {
         title: 'Software Engineer Intern',
