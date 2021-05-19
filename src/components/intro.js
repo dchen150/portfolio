@@ -4,7 +4,7 @@ import { Icon } from 'semantic-ui-react'
 
 import Derek from '../assets/derek.jpg'
 import { TYPING_TEXT, BIO_INFO, CONTACT } from '../assets/data'
-import Resume from '../assets/Derek_Chen_Resume.pdf'
+import Resume from '../assets/Derek-Chen-Resume-One-page.pdf'
 import { COLOR } from '../constants/theme'
 import Loop from './loop'
 import Card from './card'
