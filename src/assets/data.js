@@ -35,7 +35,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'SWE intern @ Orbis Investments | ubc cs\' 22',
+    'bio': 'ubc cs\' 23 | CPSC TA | former intern @ orbis investments, huawei, SAP',
     'location': 'Vancouver, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
@@ -88,10 +88,15 @@ export const EXPERIENCES = [
         company: 'Orbis Investments',
         time: 'May 2021 - present',
         location: 'Vancouver, Canada',
-        description: ['Orbis Portfolio Systems'],
+        description: [
+            'Developed backend for global mutual fund management for company with $35+ billion of assets under management',
+            'Built a job with to identify and compute Wash Sale Tax Rule in profit/loss report – considering several edge cases, saving accountants 100 hours annually and reducing risk of error by 30%',
+            'Implemented scheduled SQL script to fetch and display fund structure',
+            'Worked with an accountant to design and develop a diagnostics dashboard, reducing manual checking time from 1hr to 5 min'
+        ],
         light: Orbis,
         dark: OrbisDark,
-        tags: ['C#', 'SQL', '.NET Core']
+        tags: ['C#', 'SQL', 'AWS EC2', '.NET Core']
     },
     {
         title: 'Software Engineer Intern',
