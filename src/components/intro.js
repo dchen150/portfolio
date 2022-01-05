@@ -69,7 +69,7 @@ function Intro (props) {
                     </LoopDiv>
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
                 </FlexBox>
-                <TLDR theme={theme}>tldr: 3rd yr cs student | experienced with Java, C++, JavaScript | interned @ huawei, sap | CS TA </TLDR>
+                <TLDR theme={theme}>tldr: 4th yr cs student | experienced with Java, C++, JavaScript | 16 months of industry expeirence </TLDR>
                 <FlexBox>
                     {
                         CONTACT.map((platform) => {

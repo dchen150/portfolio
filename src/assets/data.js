@@ -24,7 +24,7 @@ export const TYPING_TEXT = [
         backspaceCount: 5
     },
     {
-        text: 'a 3rd year CS student @ UBC',
+        text: 'a 4th year CS student @ UBC',
         backspaceCount: 25
     },
     {
@@ -35,7 +35,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'ubc cs\' 23 | CPSC TA | former intern @ orbis investments, huawei, SAP',
+    'bio': 'ubc cs\' 23 | CS TA | former intern @ orbis investments, huawei, SAP',
     'location': 'Vancouver, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
