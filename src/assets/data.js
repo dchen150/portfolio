@@ -14,6 +14,8 @@ import BizTechDark from './biztechDark.png'
 
 import nwPlusDark from './nwPlus.png'
 
+import Microsoft from './microsoft.png'
+
 export const TYPING_TEXT = [
     {
         text: 'hello :) i\'m drek',
@@ -35,8 +37,8 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'ubc cs\' 23 | CS TA | former intern @ orbis investments, huawei, SAP',
-    'location': 'Vancouver, Canada',
+    'bio': 'ubc cs\' 23 | swe intern @ msft',
+    'location': 'Bellevue, Washington, USA',
     'contact': {
         'email': 'derekc150@gmail.com',
         'github': 'dchen150',
@@ -84,9 +86,21 @@ export const CONTACT = [
 
 export const EXPERIENCES = [
     {
+        title: 'Software Engineer Intern',
+        company: 'Microsoft',
+        time: 'May 2022 - present',
+        location: 'Bellevue, Washington, USA',
+        description: [
+            'Working on a mobile shopping product.'
+        ],
+        light: Microsoft,
+        dark: Microsoft,
+        tags: []
+    },
+    {
         title: 'Software Developer Intern',
         company: 'Orbis Investments',
-        time: 'May 2021 - present',
+        time: 'May 2021 - Aug 2021',
         location: 'Vancouver, Canada',
         description: [
             'Developed backend for global mutual fund management for company with $35+ billion of assets under management',
@@ -131,7 +145,7 @@ export const EXPERIENCES = [
     {
         title: 'Teaching Assistant',
         company: 'UBC',
-        time: 'Sept 2019 - May 2020',
+        time: 'Sept 2019 - May 2022',
         location: 'Vancouver, Canada',
         description: [
             'Led programming labs for over 100 students, explaning programming concepts in Java including OOP, writing tests (JUnit), design patterns, and type hierarchies',
@@ -139,7 +153,7 @@ export const EXPERIENCES = [
         ],
         light: UBC,
         dark: UBCDark,
-        tags: ['Java', 'SOLID', 'Design Principles']
+        tags: ['TypeScript', 'Java', 'SOLID', 'Design Principles', 'JUnit']
     }
 ]
 
