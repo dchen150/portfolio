@@ -50,7 +50,8 @@ export const BIO_INFO = {
         'spikeball',
         'hiking',
         'skiing',
-        'videography/photography'
+        'videography/photography',
+        'volleyball'
     ],
     'interests': [
         'keyboards',
