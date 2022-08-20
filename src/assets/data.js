@@ -92,11 +92,13 @@ export const EXPERIENCES = [
         time: 'May 2022 - present',
         location: 'Bellevue, Washington, USA',
         description: [
-            'Working on a mobile shopping product.'
+            'Implemented gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximity – saving consumers $250 million annually',
+            'Led design meetings with relevant stakeholders to identify corner cases and decide UX experience',
+            'Integrated Upside cashback API into RESTful backend handling security concerns with 3rd party'
         ],
         light: Microsoft,
         dark: Microsoft,
-        tags: []
+        tags: ['C#', '.NET Core', 'TypeScript', 'React']
     },
     {
         title: 'Software Developer Intern',
