@@ -16,6 +16,8 @@ import nwPlusDark from './nwPlus.png'
 
 import Microsoft from './microsoft.png'
 
+import Meta from './meta.png'
+
 export const TYPING_TEXT = [
     {
         text: 'hello :) i\'m drek',
@@ -37,8 +39,8 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'ubc cs\' 23 | swe intern @ msft',
-    'location': 'Bellevue, Washington, USA',
+    'bio': 'ubc cs\' 23 | prev swe intern @ meta, msft, huawei, sap',
+    'location': 'Vancouver, BC, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
         'github': 'dchen150',
@@ -88,8 +90,22 @@ export const CONTACT = [
 export const EXPERIENCES = [
     {
         title: 'Software Engineer Intern',
+        company: 'Meta',
+        time: 'Sept 2022 - Dec 2022',
+        location: 'Menlo Park, California, USA',
+        description: [
+            'Built full stack activity log for comment moderation as a creator; completing project 3 weeks ahead of schedule',
+            'Added Hack/PHP backend APIs and corresponding React components to filter logs with date pickers, drop down menus, and search bars',
+            'Developed insights dashboard and APIs for millions of users to view essential moderation statistics'
+        ],
+        light: Meta,
+        dark: Meta,
+        tags: ['Hack', 'PHP', 'GraphQL', 'React', 'JavaScript']
+    },
+    {
+        title: 'Software Engineer Intern',
         company: 'Microsoft',
-        time: 'May 2022 - present',
+        time: 'May 2022 - Aug 2022',
         location: 'Bellevue, Washington, USA',
         description: [
             'Implemented gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximity – saving consumers $250 million annually',
