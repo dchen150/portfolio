@@ -94,6 +94,7 @@ export const EXPERIENCES = [
         time: 'Sept 2022 - Dec 2022',
         location: 'Menlo Park, California, USA',
         description: [
+            'On the Facebook Creators: Wellbeing team that builds comment ranking and comment moderation tools',
             'Built full stack activity log for comment moderation as a creator; completing project 3 weeks ahead of schedule',
             'Added Hack/PHP backend APIs and corresponding React components to filter logs with date pickers, drop down menus, and search bars',
             'Developed insights dashboard and APIs for millions of users to view essential moderation statistics'

@@ -11,7 +11,7 @@ function Credit (props) {
     return (
         <div style={{ margin: '0 auto', width: '20%' }}>
             <Text theme={theme}>
-                made by derek chen, &copy; 2021
+                made by derek chen, &copy; 2023
             </Text>
         </div>
     )
