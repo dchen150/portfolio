@@ -28,8 +28,8 @@ export const TYPING_TEXT = [
         backspaceCount: 5
     },
     {
-        text: 'a 4th year CS student @ UBC',
-        backspaceCount: 25
+        text: 'a UBC Comp Sci grad',
+        backspaceCount: 17
     },
     {
         text: 'developer',
@@ -39,7 +39,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'ubc cs\' 23 | prev swe intern @ meta, msft, huawei, sap',
+    'bio': 'ubc cs \'23 | prev swe intern @ meta, msft, huawei, sap',
     'location': 'Vancouver, BC, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
@@ -47,12 +47,15 @@ export const BIO_INFO = {
         'linkedin': 'www.linkedin.com/in/drek/',
         'instagram': 'www.instagram.com/drekchen_/'
     },
+    'collections': [
+        'SMISKI',
+    ],
     'hobbies': [
         'badminton',
         'spikeball',
         'hiking',
         'skiing',
-        'videography/photography',
+        'making videos',
         'volleyball'
     ],
     'interests': [
@@ -91,7 +94,8 @@ export const EXPERIENCES = [
     {
         title: 'Software Engineer Intern',
         company: 'Meta',
-        time: 'Sept 2022 - Dec 2022',
+        startTime: new Date('September 1, 2022'),
+        endTime: new Date('December 31, 2022'),
         location: 'Menlo Park, California, USA',
         description: [
             'On the Facebook Creators: Wellbeing team that builds comment ranking and comment moderation tools',
@@ -106,7 +110,8 @@ export const EXPERIENCES = [
     {
         title: 'Software Engineer Intern',
         company: 'Microsoft',
-        time: 'May 2022 - Aug 2022',
+        startTime: new Date('May 1, 2022'),
+        endTime: new Date('August 31, 2022'),
         location: 'Bellevue, Washington, USA',
         description: [
             'Implemented gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximity – saving consumers $250 million annually',
@@ -120,7 +125,8 @@ export const EXPERIENCES = [
     {
         title: 'Software Developer Intern',
         company: 'Orbis Investments',
-        time: 'May 2021 - Aug 2021',
+        startTime: new Date('May 1, 2021'),
+        endTime: new Date('August 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
             'Developed backend for global mutual fund management for company with $35+ billion of assets under management',
@@ -135,7 +141,8 @@ export const EXPERIENCES = [
     {
         title: 'Software Engineer Intern',
         company: 'Huawei',
-        time: 'Jan 2021 - Apr 2021',
+        startTime: new Date('January 1, 2021'),
+        endTime: new Date('April 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
             'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
@@ -149,7 +156,8 @@ export const EXPERIENCES = [
     {
         title: 'Agile Developer Intern',
         company: 'SAP',
-        time: 'May 2020 - Dec 2020',
+        startTime: new Date('May 1, 2021'),
+        endTime: new Date('December 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
             'HANA & Analytics - User Management, Licensing, Core UI',
@@ -165,7 +173,8 @@ export const EXPERIENCES = [
     {
         title: 'Teaching Assistant',
         company: 'UBC',
-        time: 'Sept 2019 - May 2022',
+        startTime: new Date('September 1, 2019'),
+        endTime: new Date('April 31, 2023'),
         location: 'Vancouver, Canada',
         description: [
             'Led programming labs for over 100 students, explaning programming concepts in Java including OOP, writing tests (JUnit), design patterns, and type hierarchies',
@@ -182,7 +191,8 @@ export const COMMUNITY_PROJECTS = [
     {
         title: 'Developer (Volunteer)',
         company: 'nwPlus',
-        time: 'May 2020 - present',
+        startTime: new Date('May 1, 2020'),
+        endTime: new Date('May 31, 2023'),
         location: 'Vancouver, Canada',
         description: [
             'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal using React, yarn, and Firebase Storage/Firestore',
@@ -195,7 +205,8 @@ export const COMMUNITY_PROJECTS = [
     {
         title: 'Developer Lead (Volunteer)',
         company: 'BizTech',
-        time: 'Sept 2019 - present',
+        startTime: new Date('September 1, 2019'),
+        endTime: new Date('June 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
             'Collaborated with stakeholders to optimize project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
@@ -210,6 +221,16 @@ export const COMMUNITY_PROJECTS = [
 ]
 
 export const PROJECTS = [
+    {
+        name: 'Video Highlights Automation Tool',
+        icon: null,
+        subHeader: 'command line tool',
+        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and give it all of the links to the relevant Youtube videos \n 4) a highlight video is generated to local storage',
+        tags: ['Python', 'moviepy', 'YoutubeDL'],
+        links: {
+            'github': 'https://github.com/Resocram/youtube_highlights',
+        }
+    },
     {
         name: 'Mr. Goose [DeltaHacks VII]',
         icon: null,

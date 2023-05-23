@@ -17,8 +17,8 @@ const Header = styled.div`
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: ${(props) => props.theme.HIGHLIGHT};
-    width: ${(props) => props.width}px;
     padding: 10px;
+    width: 100%;
     margin: 0;
 `
 
@@ -26,6 +26,7 @@ const Name = styled.span`
     color: ${(props) => props.theme.TEXT};
     margin-bottom: 0px;
     font-size: 16px;
+    font-weight: bold;
 `
 
 const SubHeader = styled.span`
@@ -38,7 +39,7 @@ const Content = styled.div`
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: ${(props) => props.theme.HIGHLIGHT};
-    width: ${(props) => props.width}px;
+    width: 100%;
     padding: 10px;
     margin: 0;
 `
@@ -93,7 +94,7 @@ function DropDown (props) {
 
     return (
         <Container>
-            <Header theme={theme} width={625} onClick={handleClick}>
+            <Header theme={theme} onClick={handleClick}>
                 <FlexBox>
                     <Name theme={theme}>{item.name}</Name>
                     <Icon style={iconStyle} name={item.icon} />
@@ -107,10 +108,10 @@ function DropDown (props) {
             <SlideDown>
                 {
                     showDropDown ? (
-                        <Content theme={theme} width={625}>
+                        <Content theme={theme}>
                             <Description theme={theme}>{item.description}</Description>
                             <FlexBox>
-                                <FlexBox>
+                                <FlexBox style={{flexWrap: 'wrap', wordWrap: 'break-word'}}>
                                     {item.tags.map((tag) => <Tag key={tag} theme={theme}>{tag}</Tag>)}
                                 </FlexBox>
                                 <FlexBox style={{marginLeft: 'auto'}}>

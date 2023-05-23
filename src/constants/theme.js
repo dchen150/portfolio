@@ -23,3 +23,7 @@ export const COLOR = {
     DARK_GREEN: '#1F8B4C',
     WHITE: '#FFFFFF'
 }
+
+export const MOBILE = '(max-width: 767px)';
+export const TABLET = '(min-width: 768px) and (max-width: 1365px)';
+export const DESKTOP = '(min-width: 1366px)';

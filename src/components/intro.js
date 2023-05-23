@@ -3,6 +3,7 @@ import ReactJson from 'react-json-view'
 import { Icon } from 'semantic-ui-react'
 
 import Derek from '../assets/derek.jpg'
+import SmiskiLaptop from '../assets/smiskiLaptop.png'
 import { TYPING_TEXT, BIO_INFO, CONTACT } from '../assets/data'
 import Resume from '../assets/Derek-Chen-Resume-One-page.pdf'
 import { COLOR } from '../constants/theme'
@@ -10,7 +11,14 @@ import Loop from './loop'
 import Card from './card'
 
 const Container = styled.div`
-    padding: 45px 30px 10px 30px;
+    @media (max-width: 770px) {
+        /* Styles for mobile screens */
+        padding: 45px 0px 10px 0px;
+    }
+    @media (min-width: 771px) {
+        /* Styles for desktop screens */
+        padding: 45px 30px 10px 30px;
+    }
 `
 
 const FlexBox = styled.div`
@@ -34,7 +42,7 @@ const TLDR = styled.p`
 `
 
 const ResumeButton = styled.a`
-    margin-left: auto;
+    margin-left: 10px;
     margin-top: 25px;
     background-color: ${COLOR.GREEN};
     color: ${COLOR.WHITE};
@@ -51,6 +59,13 @@ const ResumeButton = styled.a`
     }
 `
 
+const Smiski = styled.img`
+    margin-left: auto;
+    margin-top: 17px;
+    width: 60px;
+    height: 60px;
+`
+
 const codeBoxStyle = {
     borderRadius: '4px',
     marginTop: '20px'
@@ -61,15 +76,20 @@ function Intro (props) {
 
     return (
         <Container>
-            <Card theme={theme} width={700} padding={30}>
+            <Card theme={theme} padding={30}>
                 <FlexBox>
                     <ProfilePicture src={Derek} alt='Derek'/>
                     <LoopDiv>
                         <Loop typingText={TYPING_TEXT} theme={theme} />
                     </LoopDiv>
+                    <Smiski
+                        alt='SMISKI Researching'
+                        src={SmiskiLaptop}
+                        loading='lazy'
+                    />
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
                 </FlexBox>
-                <TLDR theme={theme}>tldr: 4th yr cs student | experienced with Java, React, TypeScript | 2 years of industry experience</TLDR>
+                <TLDR theme={theme}>tldr: UBC BSc Computer Science Graduate | 2 years of SWE experience</TLDR>
                 <FlexBox>
                     {
                         CONTACT.map((platform) => {

@@ -9,7 +9,7 @@ function Loop (props) {
     useEffect(() => {
       setCount(1);
     }, [count]);
-  
+
     return (
       <div>
         {count ? (
@@ -18,7 +18,7 @@ function Loop (props) {
                 return (
                     [
                     <span style={{ color: theme.TEXT, fontSize: '16px' }}>{textObj.text}</span>,
-                    <Typist.Backspace count={textObj.backspaceCount} delay={2000}/> 
+                    <Typist.Backspace count={textObj.backspaceCount} delay={1500}/>
                     ]
                 )
             })}

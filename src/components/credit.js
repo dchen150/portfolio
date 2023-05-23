@@ -9,7 +9,7 @@ function Credit (props) {
     const { theme } = props
 
     return (
-        <div style={{ margin: '0 auto', width: '20%' }}>
+        <div style={{ margin: '0 auto', textAlign: 'center' }}>
             <Text theme={theme}>
                 made by derek chen, &copy; 2023
             </Text>
