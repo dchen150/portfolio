@@ -46,16 +46,6 @@ const Header = styled.p`
     font-size: 16px;
 `
 
-const SelectedItem = styled.p`
-    cursor: pointer;
-    border-radius: 3px;
-    color: ${(props) => props.theme.TEXT};
-    font-weight: bold;
-    padding: 6px;
-    margin: 2px;
-    background-color: ${(props) => props.theme.HIGHLIGHT};
-`
-
 const Tag = styled.span`
     display: inline;
     border-radius: 3px;
@@ -65,19 +55,6 @@ const Tag = styled.span`
     margin: 2px;
     background-color: ${(props) => props.theme.HIGHLIGHT};
     min-width: 0;
-`
-
-const Company = styled.p`
-    cursor: pointer;
-    border-radius: 3px;
-    color: ${(props) => props.theme.UNSELECTED};
-    font-weight: bold;
-    padding: 6px;
-    margin: 2px;
-    &:hover {
-        color: ${(props) => props.theme.TEXT};
-        background-color: ${(props) => props.theme.CARD_BACKGROUND};
-    }
 `
 
 const ExperienceContent = styled.div`
@@ -103,6 +80,44 @@ const SubHeader = styled.p`
 const ListItem = styled.li`
     color: ${(props) => props.theme.TEXT}
 `
+
+const ExperienceHeaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const SideBarItem = styled.div`
+    display: flex;
+    border-radius: 3px;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    padding: 6px 0px;
+    margin: 2px;
+    font-weight: bold;
+    ${(props) => props.isSelected ? (
+        `
+        background-color: ${props.theme.HIGHLIGHT};
+        color: ${props.theme.TEXT};
+        `
+    ) : (
+        `
+        color: ${props.theme.UNSELECTED};
+        &:hover {
+            color: ${props.theme.TEXT};
+            background-color: ${props.theme.CARD_BACKGROUND};
+        }
+        `
+    )}
+`
+
+const SideBarLogo = styled.img`
+    width: 20px;
+    height: 20px;
+    margin: 0px 4px;
+`
+
+const Company = styled.p``
 
 const DOUBLE_SLASH = '//'
 const SPACE = ' '
@@ -156,9 +171,8 @@ function Experience (props) {
     const { theme, experiences, header } = props
     const [currExperience, setCurrExperience] = useState(experiences[0])
 
-    const handleChange = (e) => {
-        e.preventDefault()
-        setCurrExperience(experiences.find((experience) => experience.company === e.target.textContent))
+    const handleChange = (company) => {
+        setCurrExperience(experiences.find((experience) => experience.company === company))
     }
 
     return (
@@ -169,18 +183,22 @@ function Experience (props) {
                         <Header theme={theme}>{header}</Header>
                         {
                             experiences.map((experience) => {
+                                const isSelected = currExperience === experience
                                 return (
-                                        currExperience === experience ? (
-                                            <SelectedItem theme={theme}>{experience.company}</SelectedItem>
-                                    ) : (
-                                            <Company theme={theme} onClick={handleChange}>{experience.company}</Company>
-                                    )
+                                    <SideBarItem theme={theme} isSelected={isSelected} onClick={() => handleChange(experience.company)}>
+                                        <SideBarLogo
+                                            alt={experience.company}
+                                            src={theme === DARK ? experience.dark : experience.light}
+                                            loading='eager'
+                                        />
+                                        <Company theme={theme}>{experience.company}</Company>
+                                    </SideBarItem>
                                 )
                             })
                         }
                     </SideBar>
                     <ExperienceContent>
-                        <FlexBox>
+                        <ExperienceHeaderContainer>
                             <Logo
                                 alt={currExperience.company}
                                 src={theme === DARK ? currExperience.dark : currExperience.light}
@@ -191,7 +209,7 @@ function Experience (props) {
                                 <SubHeader theme={theme}>{currExperience.company}</SubHeader>
                                 <SubHeader theme={theme}>{getDateRange(currExperience)} {DOUBLE_SLASH} {getWorkDuration(currExperience)}</SubHeader>
                             </HeaderContainer>
-                        </FlexBox>
+                        </ExperienceHeaderContainer>
                         <ul>
                             {currExperience.description.map((point) => <ListItem theme={theme}>{point}</ListItem>)}
                         </ul>

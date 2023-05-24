@@ -142,7 +142,7 @@ export const EXPERIENCES = [
         title: 'Software Engineer Intern',
         company: 'Huawei',
         startTime: new Date('January 1, 2021'),
-        endTime: new Date('April 31, 2021'),
+        endTime: new Date('April 1, 2021'),
         location: 'Vancouver, Canada',
         description: [
             'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
