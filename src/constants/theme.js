@@ -21,6 +21,8 @@ export const DARK = {
 export const COLOR = {
     GREEN: '#2ECC71',
     DARK_GREEN: '#1F8B4C',
+    SMISKI_BACKGROUND_LIGHT_GREEN: '#61ae5c',
+    SMISKI_BACKGROUND_DARK_GREEN: '#247030',
     WHITE: '#FFFFFF'
 }
 

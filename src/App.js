@@ -6,6 +6,8 @@ import StyledContentLoader from 'styled-content-loader'
 import { LIGHT, DARK, COLOR } from './constants/theme'
 import { EXPERIENCES, COMMUNITY_PROJECTS } from './assets/data'
 import Credit from './components/credit'
+import SmiskiCollection from './components/smiskiCollection'
+
 const Intro = lazy(() => import('./components/intro'))
 const Experience = lazy(() => import('./components/experience'))
 const Project = lazy(() => import('./components/project'))
@@ -53,6 +55,8 @@ function App() {
       <Suspense fallback={<ContentLoader />}>
         <Intro theme={theme} />
       </Suspense>
+
+      <SmiskiCollection />
 
       <Suspense fallback={<ContentLoader />}>
         <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />

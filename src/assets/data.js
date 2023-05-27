@@ -18,6 +18,21 @@ import Microsoft from './microsoft.png'
 
 import Meta from './meta.png'
 
+import SmiskiApproving from './smiskiApproving.png'
+import SmiskiResearching from './smiskiResearching.png'
+import SmiskiPresenting from './smiskiPresenting.png'
+import SmiskiGoodIdea from './smiskiGoodIdea.png'
+import SmiskiOnTheRoad from './smiskiOnTheRoad.png'
+import SmiskiGroupThink from './smiskiGroupThink.png'
+import SmiskiWorkSecret from './smiskiWorkSecret.png'
+import SmiskiTheSource from './smiskiTheSource.png'
+import SmiskiFuzinAndRaijin from './smiskiFuzinAndRaijin.png'
+import SmiskiBacchus from './smiskiBacchus.png'
+import SmiskiVelazquez from './smiskiVelazquez.png'
+import SmiskiDali from './smiskiDali.png'
+import SmiskiPearlEarring from './smiskiPearlEarring.png'
+import SmiskiScream from './smiskiScream.png'
+
 export const TYPING_TEXT = [
     {
         text: 'hello :) i\'m drek',
@@ -87,6 +102,117 @@ export const CONTACT = [
     {
         iconName: 'envelope',
         link: 'mailto:derekc150@gmail.com'
+    }
+]
+
+export const SMISKI_COLLECTION = [
+    {
+        name: "@ Work",
+        data: [
+            {
+                name: "SMISKI Approving",
+                isOwned: true,
+                icon: SmiskiApproving,
+                isFavorite: false,
+                details: "Acquired May 18, 2023 @ Loft in Ueno, Tokyo.",
+            },
+            {
+                name: "SMISKI Researching",
+                isOwned: true,
+                icon: SmiskiResearching,
+                isFavorite: true,
+                details: "Acquired May 20, 2023 via trading SMISKI Vela'zquez.",
+            },
+            {
+                name: "SMISKI Presenting",
+                isOwned: true,
+                icon: SmiskiPresenting,
+                isFavorite: true,
+                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo."
+            },
+            {
+                name: "SMISKI Good Idea",
+                isOwned: true,
+                icon: SmiskiGoodIdea,
+                isFavorite: false,
+                details: "Acquired May 20, 2023 via trading Little SMISKI Group Think (duplicate pull)."
+            },
+            {
+                name: "SMISKI On the Road",
+                isOwned: true,
+                icon: SmiskiOnTheRoad,
+                isFavorite: true,
+                details: "Acquired May 17, 2023 @ Hands in Shibuya, Tokyo."
+            },
+            {
+                name: "Little SMISKI Group Think",
+                isOwned: true,
+                icon: SmiskiGroupThink,
+                isFavorite: false,
+                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo."
+            },
+            {
+                name: "SMISKI @ Work Secret",
+                isOwned: false,
+                icon: SmiskiWorkSecret,
+                isFavorite: true,
+                details: "Looking to buy or trade."
+            }
+        ]
+    },
+    {
+        name: "Museum",
+        data: [
+            {
+                name: "SMISKI The Source",
+                isOwned: false,
+                icon: SmiskiTheSource,
+                isFavorite: false,
+                details: "Piece of artwork that looks like a bathroom urinal. Original art piece by Marcel Duchamp.",
+            },
+            {
+                name: "SMISKI Fuzin & Raijin",
+                isOwned: false,
+                icon: SmiskiFuzinAndRaijin,
+                isFavorite: false,
+                details: "God of Wind + God of Thunder from Japanese mythology.",
+            },
+            {
+                name: "SMISKI Bacchus",
+                isOwned: true,
+                icon: SmiskiBacchus,
+                isFavorite: false,
+                details: "Greek God of wine. Original piece by Michelangelo Merisi da Caravaggio."
+            },
+            {
+                name: "SMISKI Vela'zquez",
+                isOwned: false,
+                icon: SmiskiVelazquez,
+                isFavorite: true,
+                details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Traded away for SMISKI Reseraching. Original artist was Diego Velázquez."
+            },
+            {
+                name: "SMISKI Dali",
+                isOwned: false,
+                icon: SmiskiDali,
+                isFavorite: true,
+                details: "Painting depicting melting clocks. Original piece by Salvador Dalí."
+            },
+            {
+                name: "SMISKI Pearl Earring",
+                isOwned: false,
+                icon: SmiskiPearlEarring,
+                isFavorite: true,
+                details: "A girl with a pearl earring. Original piece by Johannes Vermeer."
+            },
+            {
+                name: "SMISKI Scream (Secret)",
+                isOwned: false,
+                icon: SmiskiScream,
+                isFavorite: true,
+                details: "Looking to buy or trade. Original piece by Edvard Munch."
+            }
+        ]
     }
 ]
 

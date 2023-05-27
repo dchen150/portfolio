@@ -1,14 +1,26 @@
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import styled, { keyframes, css } from 'styled-components'
 import ReactJson from 'react-json-view'
 import { Icon } from 'semantic-ui-react'
 
 import Derek from '../assets/derek.jpg'
 import SmiskiLaptop from '../assets/smiskiLaptop.png'
+import SmiskiPeeking from '../assets/smiskiPeeking.png'
 import { TYPING_TEXT, BIO_INFO, CONTACT } from '../assets/data'
 import Resume from '../assets/Derek-Chen-Resume-One-page.pdf'
 import { COLOR } from '../constants/theme'
 import Loop from './loop'
 import Card from './card'
+
+// Define the animation keyframes
+const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+`;
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -23,6 +35,11 @@ const Container = styled.div`
 
 const FlexBox = styled.div`
     display: flex;
+`
+
+const AbsoluteFlexBox = styled.div`
+    display: flex;
+    position: relative;
 `
 
 const LoopDiv = styled.div`
@@ -64,6 +81,7 @@ const Smiski = styled.img`
     margin-top: 17px;
     width: 60px;
     height: 60px;
+    cursor: pointer;
 `
 
 const codeBoxStyle = {
@@ -71,13 +89,50 @@ const codeBoxStyle = {
     marginTop: '20px'
 }
 
+const SmiskiPeekingSlideout = styled.img`
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    transform: translate(66%, 0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+
+    ${({ isHovered }) =>
+        isHovered &&
+        css`
+            animation: ${css`${slideOut}`} 0.5s forwards;
+            transform: translateX(-100%);
+        `
+    }
+`
+
 function Intro (props) {
     const { theme } = props
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleHover = () => {
+        setIsHovered(true);
+    };
+
+    const handleHoverEnd = () => {
+        setIsHovered(false);
+    };
+
+    const handleSmiskiClick = () => {
+        const element = document.getElementById("SMISKI Collection")
+        if (element.style.display === 'none') {
+            element.style.display = 'block'
+        } else {
+            element.style.display = 'none'
+        }
+    }
 
     return (
         <Container>
             <Card theme={theme} padding={30}>
-                <FlexBox>
+                <AbsoluteFlexBox>
                     <ProfilePicture src={Derek} alt='Derek'/>
                     <LoopDiv>
                         <Loop typingText={TYPING_TEXT} theme={theme} />
@@ -86,9 +141,18 @@ function Intro (props) {
                         alt='SMISKI Researching'
                         src={SmiskiLaptop}
                         loading='lazy'
+                        onMouseEnter={handleHover}
+                        onMouseLeave={handleHoverEnd}
+                        onClick={handleSmiskiClick}
+                    />
+                    <SmiskiPeekingSlideout
+                        alt='SMISKI Peeking'
+                        src={SmiskiPeeking}
+                        loading='lazy'
+                        isHovered={isHovered}
                     />
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
-                </FlexBox>
+                </AbsoluteFlexBox>
                 <TLDR theme={theme}>tldr: UBC BSc Computer Science Graduate | 2 years of SWE experience</TLDR>
                 <FlexBox>
                     {
