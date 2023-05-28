@@ -3,7 +3,7 @@ import { COLOR } from '../constants/theme'
 import { useRef } from 'react'
 
 const Container = styled.div`
-    width: 97%;
+    width: 100%;
     margin: 0 auto;
 `
 
@@ -30,7 +30,7 @@ const SmiskiContainer = styled.div`
     overflow-x: scroll;
     gap: 5px;
     white-space: nowrap;
-    margin: 0px 5px;
+    margin: 0px 6px;
 `
 
 const SmiskiCard = styled.div`
@@ -80,7 +80,7 @@ const NavLeftArrow = styled.p`
     top: 42%;
     left: 3px;
     font-size: 30px;
-    margin: 0px;
+    margin: 0px 0px 0px 3px;
     cursor: pointer;
 `
 
@@ -91,7 +91,7 @@ const NavRightArrow = styled.p`
     top: 45%;
     right: 3px;
     font-size: 30px;
-    margin: 0px;
+    margin: 0px 3px 0px 0px;
     cursor: pointer;
 `
 

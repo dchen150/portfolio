@@ -17,7 +17,6 @@ const Container = styled.div`
 
 const Header = styled.h3`
     color: ${(props) => props.theme.TEXT_COLOR};
-    padding: 10px 10px;
     margin-bottom: 0px;
 `
 
@@ -40,6 +39,11 @@ const Close = styled.p`
     font-size: 20px;
 `
 
+const Description = styled.div`
+    color: ${(props) => props.theme.TEXT_COLOR};
+    padding-bottom: 30px
+`
+
 function SmiskiCollection () {
     const theme = {
         CARD_BACKGROUND: COLOR.SMISKI_BACKGROUND_LIGHT_GREEN,
@@ -55,11 +59,15 @@ function SmiskiCollection () {
 
     return (
         <Container id="SMISKI Collection" style={{ display: 'none'}}>
-            <Card theme={theme}>
+            <Card theme={theme} padding={15}>
                 <FlexBox>
                     <Header theme={theme}>SMISKI Collection</Header>
                     <Close theme={theme} onClick={handleClose}>x</Close>
                 </FlexBox>
+
+                <Description theme={theme}>
+                    Smiski are curious little creatures that love hiding in small spaces and corners of your room. You might discover one at night as they mysteriously glow in the dark. First got interested in SMISKI on my trip to Japan in 2023. Currently looking forward to purchasing the SMISKI Exercising series.
+                </Description>
 
                 <RowContainer>
                     {SMISKI_COLLECTION.map((series, idx) => <SmiskiSeries key={series.name + idx} series={series} />)}
