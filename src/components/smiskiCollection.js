@@ -28,16 +28,39 @@ const RowContainer = styled.div`
     padding-bottom: 10px;
 `
 
+const FlexBox = styled.div`
+    display: flex;
+`
+
+const Close = styled.p`
+    margin: 7px 20px 0px auto;
+    cursor: pointer;
+    font-weight: bold;
+    color: ${(props) => props.theme.TEXT_COLOR};
+    font-size: 20px;
+`
+
 function SmiskiCollection () {
     const theme = {
         CARD_BACKGROUND: COLOR.SMISKI_BACKGROUND_LIGHT_GREEN,
         TEXT_COLOR: COLOR.WHITE
     }
 
+    const handleClose = () => {
+        const element = document.getElementById("SMISKI Collection")
+        if (element.style.display === 'block') {
+            element.style.display = 'none'
+        }
+    }
+
     return (
         <Container id="SMISKI Collection" style={{ display: 'none'}}>
             <Card theme={theme}>
-                <Header theme={theme}>SMISKI Collection</Header>
+                <FlexBox>
+                    <Header theme={theme}>SMISKI Collection</Header>
+                    <Close theme={theme} onClick={handleClose}>x</Close>
+                </FlexBox>
+
                 <RowContainer>
                     {SMISKI_COLLECTION.map((series, idx) => <SmiskiSeries key={series.name + idx} series={series} />)}
                 </RowContainer>

@@ -124,6 +124,7 @@ function Intro (props) {
         const element = document.getElementById("SMISKI Collection")
         if (element.style.display === 'none') {
             element.style.display = 'block'
+            element.scrollIntoView({ behavior: 'smooth' })
         } else {
             element.style.display = 'none'
         }

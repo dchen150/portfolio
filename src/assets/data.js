@@ -32,6 +32,27 @@ import SmiskiVelazquez from './smiskiVelazquez.png'
 import SmiskiDali from './smiskiDali.png'
 import SmiskiPearlEarring from './smiskiPearlEarring.png'
 import SmiskiScream from './smiskiScream.png'
+import SmiskiUnderpants from './smiskiUnderpants.png'
+import SmiskiStruggling from './smiskiStruggling.png'
+import SmiskiLoosePants from './smiskiLoosePants.png'
+import SmiskiPuttingOnSocks from './smiskiPuttingOnSocks.png'
+import SmiskiSweater from './smiskiSweater.png'
+import SmiskiTightPants from './smiskiTightPants.png'
+import SmiskiDressingSecret from './smiskiDressingSecret.png'
+import SmiskiHiding from './smiskiHiding.png'
+import SmiskiDaydreaming from './smiskiDaydreaming.png'
+import SmiskiPlaying from './smiskiPlaying.png'
+import SmiskiNapTime from './smiskiNapTime.png'
+import SmiskiThinking from './smiskiThinking.png'
+import SmiskiLifting from './smiskiLifting.png'
+import SmiskiSunflower from './smiskiSunflower.png'
+import SmiskiDancing from './smiskiDancing.png'
+import SmiskiMarching from './smiskiMarching.png'
+import SmiskiOnDrums from './smiskiOnDrums.png'
+import SmiskiOnYourSide from './smiskiOnYourSide.png'
+import SmiskiCheerleading from './smiskiCheerleading.png'
+import SmiskiCheering from './smiskiCheering.png'
+import SmiskiCheerSecret from './smiskiCheerSecret.png'
 
 export const TYPING_TEXT = [
     {
@@ -105,6 +126,8 @@ export const CONTACT = [
     }
 ]
 
+const SMISKI_WANT = "Looking to buy or trade."
+
 export const SMISKI_COLLECTION = [
     {
         name: "@ Work",
@@ -156,13 +179,20 @@ export const SMISKI_COLLECTION = [
                 isOwned: false,
                 icon: SmiskiWorkSecret,
                 isFavorite: true,
-                details: "Looking to buy or trade."
+                details: SMISKI_WANT
             }
         ]
     },
     {
         name: "Museum",
         data: [
+            {
+                name: "SMISKI Bacchus",
+                isOwned: true,
+                icon: SmiskiBacchus,
+                isFavorite: false,
+                details: "Acquired May 19, 2023 @ Kiddy Land in Harajuku, Tokyo. Greek God of wine."
+            },
             {
                 name: "SMISKI The Source",
                 isOwned: false,
@@ -176,13 +206,6 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiFuzinAndRaijin,
                 isFavorite: false,
                 details: "God of Wind + God of Thunder from Japanese mythology.",
-            },
-            {
-                name: "SMISKI Bacchus",
-                isOwned: true,
-                icon: SmiskiBacchus,
-                isFavorite: false,
-                details: "Greek God of wine. Original piece by Michelangelo Merisi da Caravaggio."
             },
             {
                 name: "SMISKI Vela'zquez",
@@ -210,7 +233,169 @@ export const SMISKI_COLLECTION = [
                 isOwned: false,
                 icon: SmiskiScream,
                 isFavorite: true,
-                details: "Looking to buy or trade. Original piece by Edvard Munch."
+                details: `${SMISKI_WANT} Original piece by Edvard Munch.`
+            }
+        ]
+    },
+    {
+        name: "Dressing",
+        data: [
+            {
+                name: "SMISKI Underpants",
+                isOwned: true,
+                icon: SmiskiUnderpants,
+                isFavorite: true,
+                details: "Acquired May 14, 2023 @ Hands in Shibuya, Tokyo.",
+            },
+            {
+                name: "SMISKI Struggling",
+                isOwned: false,
+                icon: SmiskiStruggling,
+                isFavorite: true,
+                details: SMISKI_WANT,
+            },
+            {
+                name: "SMISKI Loose Pants",
+                isOwned: false,
+                icon: SmiskiLoosePants,
+                isFavorite: true,
+                details: "SMISKI is at a loss because his pants are too big."
+            },
+            {
+                name: "SMISKI Putting On Socks",
+                isOwned: false,
+                icon: SmiskiPuttingOnSocks,
+                isFavorite: false,
+                details: "SMISKI is putting on socks. He can‘t wear them well because he is wobbling standing on one leg."
+            },
+            {
+                name: "SMISKI Sweater",
+                isOwned: false,
+                icon: SmiskiSweater,
+                isFavorite: false,
+                details: "SMISKI is trying on a sweater. Will it fit?"
+            },
+            {
+                name: "SMISKI Tight Pants",
+                isOwned: false,
+                icon: SmiskiTightPants,
+                isFavorite: true,
+                details: "SMISKI is trying on tight pants. He‘s desperately trying to get them on!"
+            },
+            {
+                name: "SMISKI Dressing (Secret)",
+                isOwned: false,
+                icon: SmiskiDressingSecret,
+                isFavorite: true,
+                details: SMISKI_WANT
+            }
+        ]
+    },
+    {
+        name: "Living",
+        data: [
+            {
+                name: "SMISKI Hiding",
+                isOwned: true,
+                icon: SmiskiHiding,
+                isFavorite: false,
+                details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Open to trading.",
+            },
+            {
+                name: "SMISKI Daydreaming",
+                isOwned: false,
+                icon: SmiskiDaydreaming,
+                isFavorite: true,
+                details: SMISKI_WANT,
+            },
+            {
+                name: "SMISKI Playing",
+                isOwned: false,
+                icon: SmiskiPlaying,
+                isFavorite: true,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI Nap Time",
+                isOwned: false,
+                icon: SmiskiNapTime,
+                isFavorite: true,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI Thinking",
+                isOwned: false,
+                icon: SmiskiThinking,
+                isFavorite: false,
+                details: "SMISKI is thinking."
+            },
+            {
+                name: "SMISKI Lifting",
+                isOwned: false,
+                icon: SmiskiLifting,
+                isFavorite: true,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI Sunflower (Secret)",
+                isOwned: false,
+                icon: SmiskiSunflower,
+                isFavorite: true,
+                details: SMISKI_WANT
+            }
+        ]
+    },
+    {
+        name: "Cheer",
+        data: [
+            {
+                name: "SMISKI Dancing",
+                isOwned: true,
+                icon: SmiskiDancing,
+                isFavorite: false,
+                details: "Acquired May 20, 2023 @ Kiddy Land in Harajuku, Tokyo. Open to trading.",
+            },
+            {
+                name: "SMISKI Cheering",
+                isOwned: false,
+                icon: SmiskiCheering,
+                isFavorite: true,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI Marching",
+                isOwned: false,
+                icon: SmiskiMarching,
+                isFavorite: false,
+                details: SMISKI_WANT,
+            },
+            {
+                name: "SMISKI On Drums",
+                isOwned: false,
+                icon: SmiskiOnDrums,
+                isFavorite: false,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI On Your Side",
+                isOwned: false,
+                icon: SmiskiOnYourSide,
+                isFavorite: false,
+                details: "SMISKI is cheering for you :)"
+            },
+            {
+                name: "SMISKI Cheerleading",
+                isOwned: false,
+                icon: SmiskiCheerleading,
+                isFavorite: false,
+                details: SMISKI_WANT
+            },
+            {
+                name: "SMISKI Cheer (Secret)",
+                isOwned: false,
+                icon: SmiskiCheerSecret,
+                isFavorite: true,
+                details: SMISKI_WANT
             }
         ]
     }

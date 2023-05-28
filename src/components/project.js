@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Card from './card'
 import DropDown from './dropdown'
 import { PROJECTS } from '../assets/data'
+import SmiskiLaptop from '../assets/smiskiLaptop.png'
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -23,14 +24,54 @@ const Header = styled.p`
     font-size: 16px;
 `
 
+const Smiski = styled.img`
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+`
+
+const CollectionContainer = styled.div`
+    width: 100%;
+    text-align: center;
+`
+
+const CallToAction = styled.p`
+    margin-top: 17px;
+    color: ${(props) => props.theme.TEXT};
+    margin: 0px;
+    font-weight: bold;
+`
+
 function Project (props) {
     const { theme } = props
+
+    const handleSmiskiClick = () => {
+        const element = document.getElementById("SMISKI Collection")
+        if (element.style.display === 'none') {
+            element.style.display = 'block'
+            element.scrollIntoView({ behavior: 'smooth' })
+        } else {
+            element.style.display = 'none'
+        }
+    }
 
     return (
         <Container>
             <Card theme={theme} padding={30}>
                 <Header theme={theme}>Projects</Header>
                 {PROJECTS.map((project) => <DropDown theme={theme} item={project} />)}
+                <CollectionContainer>
+                    <CallToAction theme={theme}>
+                        Click Me!
+                    </CallToAction>
+                    <Smiski
+                        alt='SMISKI Researching'
+                        src={SmiskiLaptop}
+                        loading='lazy'
+                        onClick={handleSmiskiClick}
+                    />
+
+                </CollectionContainer>
             </Card>
         </Container>
     )

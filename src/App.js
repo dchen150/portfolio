@@ -56,8 +56,6 @@ function App() {
         <Intro theme={theme} />
       </Suspense>
 
-      <SmiskiCollection />
-
       <Suspense fallback={<ContentLoader />}>
         <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
       </Suspense>
@@ -69,6 +67,8 @@ function App() {
       <Suspense fallback={<ContentLoader />}>
         <Project theme={theme} />
       </Suspense>
+
+      <SmiskiCollection />
 
       <Credit theme={theme} />
 
