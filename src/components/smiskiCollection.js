@@ -41,7 +41,7 @@ const Close = styled.p`
 
 const Description = styled.div`
     color: ${(props) => props.theme.TEXT_COLOR};
-    padding-bottom: 30px
+    padding-bottom: 15px
 `
 
 function SmiskiCollection () {
@@ -49,6 +49,26 @@ function SmiskiCollection () {
         CARD_BACKGROUND: COLOR.SMISKI_BACKGROUND_LIGHT_GREEN,
         TEXT_COLOR: COLOR.WHITE
     }
+
+    const groupByCurrency = (accumulator, data) => {
+        return (
+            data.reduce((result, item) => {
+                if (item["paidAmount"] === null) {
+                    return result
+                }
+
+                return ({
+                ...result,
+                [item["paidCurrency"]]: (result[item["paidCurrency"]] || 0) + item["paidAmount"]
+            })}, accumulator)
+        )
+    }
+
+    let acc = {}
+
+    SMISKI_COLLECTION.forEach((series) => {
+        acc = groupByCurrency(acc, series.data)
+    })
 
     const handleClose = () => {
         const element = document.getElementById("SMISKI Collection")
@@ -66,7 +86,22 @@ function SmiskiCollection () {
                 </FlexBox>
 
                 <Description theme={theme}>
-                    Smiski are curious little creatures that love hiding in small spaces and corners of your room. You might discover one at night as they mysteriously glow in the dark. First got interested in SMISKI on my trip to Japan in 2023. Currently looking forward to purchasing the SMISKI Exercising series.
+                    Smiski are curious little creatures that love hiding in small spaces and corners of your room. You might discover one at night as they mysteriously glow in the dark. I first got interested in SMISKI on my trip to Japan in 2023. Currently looking forward to purchasing the SMISKI Exercising series.
+                    <br />
+                    <br />
+                    Note: all weights shown are independent of the box + wrapper
+                    <br />
+                    <br />
+                    Total Spent:
+                    <br />
+                    {Object.entries(acc).map((entry) => {
+                        return (
+                            <>
+                                {entry[0]}: {entry[1]}
+                                <br/>
+                            </>
+                        )
+                    })}
                 </Description>
 
                 <RowContainer>

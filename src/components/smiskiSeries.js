@@ -60,6 +60,7 @@ const SmiskiDescription = styled.div`
 const SmiskiName = styled.p`
     font-weight: bold;
     color: ${(props) => props.theme.TEXT_COLOR};
+    margin: 0px;
 `
 
 const Description = styled.p`
@@ -93,6 +94,16 @@ const NavRightArrow = styled.p`
     font-size: 30px;
     margin: 0px 3px 0px 0px;
     cursor: pointer;
+`
+
+const WhiteText = styled.p`
+    color: ${(props) => props.theme.TEXT_COLOR};
+`
+
+const Cost = styled.p`
+    color: ${(props) => props.theme.TEXT_COLOR};
+    font-size: 12.5px;
+    margin: 0px;
 `
 
 function SmiskiSeries (props) {
@@ -138,7 +149,9 @@ function SmiskiSeries (props) {
                                 </ImgContainer>
 
                                 <SmiskiDescription>
-                                    <SmiskiName theme={theme}>{smiski.name}</SmiskiName>
+                                    <SmiskiName theme={theme} hasPrice={smiski.paidAmount}>{smiski.name}</SmiskiName>
+                                    <Cost theme={theme}>{`Spent: ${smiski.paidAmount !== null ? `${smiski.paidAmount + smiski.paidCurrency}` : "N/A"}`}</Cost>
+                                    <WhiteText theme={theme}>{`Weight: ${smiski.weight ? `${smiski.weight} ${smiski.weightUnit}` : "Unknown"}`}</WhiteText>
                                     <Description theme={theme}>{smiski.details}</Description>
                                 </SmiskiDescription>
                             </SmiskiCard>

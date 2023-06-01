@@ -138,6 +138,10 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiApproving,
                 isFavorite: false,
                 details: "Acquired May 18, 2023 @ Loft in Ueno, Tokyo.",
+                weight: 25.4,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Researching",
@@ -145,41 +149,65 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiResearching,
                 isFavorite: true,
                 details: "Acquired May 20, 2023 via trading SMISKI Vela'zquez.",
+                weight: 25.1,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Presenting",
                 isOwned: true,
                 icon: SmiskiPresenting,
                 isFavorite: true,
-                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo."
+                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo.",
+                weight: 32.4,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Good Idea",
                 isOwned: true,
                 icon: SmiskiGoodIdea,
                 isFavorite: false,
-                details: "Acquired May 20, 2023 via trading Little SMISKI Group Think (duplicate pull)."
+                details: "Acquired May 20, 2023 via trading Little SMISKI Group Think.",
+                weight: 25.7,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI On the Road",
                 isOwned: true,
                 icon: SmiskiOnTheRoad,
                 isFavorite: true,
-                details: "Acquired May 17, 2023 @ Hands in Shibuya, Tokyo."
+                details: "Acquired May 17, 2023 @ Hands in Shibuya, Tokyo.",
+                weight: 26.2,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "Little SMISKI Group Think",
                 isOwned: true,
                 icon: SmiskiGroupThink,
                 isFavorite: false,
-                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo."
+                details: "Acquired May 16, 2023 @ Loft in Ueno, Tokyo. Pulled a duplicate and traded it for SMISKI Good Idea.",
+                weight: 28.9,
+                weightUnit: 'g',
+                paidAmount: 1980,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI @ Work Secret",
                 isOwned: false,
                 icon: SmiskiWorkSecret,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             }
         ]
     },
@@ -191,7 +219,11 @@ export const SMISKI_COLLECTION = [
                 isOwned: true,
                 icon: SmiskiBacchus,
                 isFavorite: false,
-                details: "Acquired May 19, 2023 @ Kiddy Land in Harajuku, Tokyo. Greek God of wine."
+                details: "Acquired May 19, 2023 @ Kiddy Land in Harajuku, Tokyo. Greek God of wine.",
+                weight: 30.2,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI The Source",
@@ -199,6 +231,10 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiTheSource,
                 isFavorite: false,
                 details: "Piece of artwork that looks like a bathroom urinal. Original art piece by Marcel Duchamp.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Fuzin & Raijin",
@@ -206,34 +242,54 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiFuzinAndRaijin,
                 isFavorite: false,
                 details: "God of Wind + God of Thunder from Japanese mythology.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Vela'zquez",
                 isOwned: false,
                 icon: SmiskiVelazquez,
                 isFavorite: true,
-                details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Traded away for SMISKI Reseraching. Original artist was Diego Velázquez."
+                details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Traded away for SMISKI Reseraching.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Dali",
                 isOwned: false,
                 icon: SmiskiDali,
                 isFavorite: true,
-                details: "Painting depicting melting clocks. Original piece by Salvador Dalí."
+                details: "Painting depicting melting clocks. Original piece by Salvador Dalí.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Pearl Earring",
                 isOwned: false,
                 icon: SmiskiPearlEarring,
                 isFavorite: true,
-                details: "A girl with a pearl earring. Original piece by Johannes Vermeer."
+                details: "A girl with a pearl earring. Original piece by Johannes Vermeer.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Scream (Secret)",
                 isOwned: false,
                 icon: SmiskiScream,
                 isFavorite: true,
-                details: `${SMISKI_WANT} Original piece by Edvard Munch.`
+                details: `${SMISKI_WANT} Original piece by Edvard Munch.`,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             }
         ]
     },
@@ -246,6 +302,10 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiUnderpants,
                 isFavorite: true,
                 details: "Acquired May 14, 2023 @ Hands in Shibuya, Tokyo.",
+                weight: 26.3,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Struggling",
@@ -253,41 +313,65 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiStruggling,
                 isFavorite: true,
                 details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Loose Pants",
                 isOwned: false,
                 icon: SmiskiLoosePants,
                 isFavorite: true,
-                details: "SMISKI is at a loss because his pants are too big."
+                details: "SMISKI is at a loss because his pants are too big.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Putting On Socks",
                 isOwned: false,
                 icon: SmiskiPuttingOnSocks,
                 isFavorite: false,
-                details: "SMISKI is putting on socks. He can‘t wear them well because he is wobbling standing on one leg."
+                details: "SMISKI is putting on socks. He can‘t wear them well because he is wobbling standing on one leg.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Sweater",
                 isOwned: false,
                 icon: SmiskiSweater,
                 isFavorite: false,
-                details: "SMISKI is trying on a sweater. Will it fit?"
+                details: "SMISKI is trying on a sweater. Will it fit?",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Tight Pants",
                 isOwned: false,
                 icon: SmiskiTightPants,
                 isFavorite: true,
-                details: "SMISKI is trying on tight pants. He‘s desperately trying to get them on!"
+                details: "SMISKI is trying on tight pants. He‘s desperately trying to get them on!",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Dressing (Secret)",
                 isOwned: false,
                 icon: SmiskiDressingSecret,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             }
         ]
     },
@@ -300,6 +384,10 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiHiding,
                 isFavorite: false,
                 details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Open to trading.",
+                weight: 31.6,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Daydreaming",
@@ -307,41 +395,65 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiDaydreaming,
                 isFavorite: true,
                 details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Playing",
                 isOwned: false,
                 icon: SmiskiPlaying,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Nap Time",
                 isOwned: false,
                 icon: SmiskiNapTime,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Thinking",
                 isOwned: false,
                 icon: SmiskiThinking,
                 isFavorite: false,
-                details: "SMISKI is thinking."
+                details: "SMISKI is thinking.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Lifting",
                 isOwned: false,
                 icon: SmiskiLifting,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Sunflower (Secret)",
                 isOwned: false,
                 icon: SmiskiSunflower,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             }
         ]
     },
@@ -354,13 +466,21 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiDancing,
                 isFavorite: false,
                 details: "Acquired May 20, 2023 @ Kiddy Land in Harajuku, Tokyo. Open to trading.",
+                weight: 32.8,
+                weightUnit: 'g',
+                paidAmount: 990,
+                paidCurrency: '¥'
             },
             {
                 name: "SMISKI Cheering",
                 isOwned: false,
                 icon: SmiskiCheering,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Marching",
@@ -368,34 +488,54 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiMarching,
                 isFavorite: false,
                 details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI On Drums",
                 isOwned: false,
                 icon: SmiskiOnDrums,
                 isFavorite: false,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI On Your Side",
                 isOwned: false,
                 icon: SmiskiOnYourSide,
                 isFavorite: false,
-                details: "SMISKI is cheering for you :)"
+                details: "SMISKI is cheering for you :)",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Cheerleading",
                 isOwned: false,
                 icon: SmiskiCheerleading,
                 isFavorite: false,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Cheer (Secret)",
                 isOwned: false,
                 icon: SmiskiCheerSecret,
                 isFavorite: true,
-                details: SMISKI_WANT
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             }
         ]
     }
