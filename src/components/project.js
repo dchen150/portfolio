@@ -43,17 +43,7 @@ const CallToAction = styled.p`
 `
 
 function Project (props) {
-    const { theme } = props
-
-    const handleSmiskiClick = () => {
-        const element = document.getElementById("SMISKI Collection")
-        if (element.style.display === 'none') {
-            element.style.display = 'block'
-            element.scrollIntoView({ behavior: 'smooth' })
-        } else {
-            element.style.display = 'none'
-        }
-    }
+    const { theme, onSmiskiClick } = props
 
     return (
         <Container>
@@ -68,7 +58,7 @@ function Project (props) {
                         alt='SMISKI Researching'
                         src={SmiskiLaptop}
                         loading='lazy'
-                        onClick={handleSmiskiClick}
+                        onClick={() => {onSmiskiClick()}}
                     />
 
                 </CollectionContainer>

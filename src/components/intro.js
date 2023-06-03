@@ -109,7 +109,7 @@ const SmiskiPeekingSlideout = styled.img`
 `
 
 function Intro (props) {
-    const { theme } = props
+    const { theme, onSmiskiClick } = props
     const [isHovered, setIsHovered] = useState(false);
 
     const handleHover = () => {
@@ -119,16 +119,6 @@ function Intro (props) {
     const handleHoverEnd = () => {
         setIsHovered(false);
     };
-
-    const handleSmiskiClick = () => {
-        const element = document.getElementById("SMISKI Collection")
-        if (element.style.display === 'none') {
-            element.style.display = 'block'
-            element.scrollIntoView({ behavior: 'smooth' })
-        } else {
-            element.style.display = 'none'
-        }
-    }
 
     return (
         <Container>
@@ -144,7 +134,7 @@ function Intro (props) {
                         loading='lazy'
                         onMouseEnter={handleHover}
                         onMouseLeave={handleHoverEnd}
-                        onClick={handleSmiskiClick}
+                        onClick={() => {onSmiskiClick()}}
                     />
                     <SmiskiPeekingSlideout
                         alt='SMISKI Peeking'

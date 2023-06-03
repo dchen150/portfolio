@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react'
+import React, { useState, lazy, Suspense, } from 'react'
 import Switch from "react-switch"
 import { Icon } from 'semantic-ui-react'
 import StyledContentLoader from 'styled-content-loader'
@@ -6,16 +6,32 @@ import StyledContentLoader from 'styled-content-loader'
 import { LIGHT, DARK, COLOR } from './constants/theme'
 import { EXPERIENCES, COMMUNITY_PROJECTS } from './assets/data'
 import Credit from './components/credit'
-import SmiskiCollection from './components/smiskiCollection'
+
+const smiskiPromise = import('./components/smiskiCollection')
 
 const Intro = lazy(() => import('./components/intro'))
 const Experience = lazy(() => import('./components/experience'))
 const Project = lazy(() => import('./components/project'))
+const SmiskiCollection = lazy(() => smiskiPromise)
 
 function App() {
   const [isDark, setIsDark] = useState(true)
+  const [showSmiskiCollection, setShowSmiskiCollection] = useState(false)
   const theme = isDark ? DARK : LIGHT
   document.body.style = `background: ${theme.BACKGROUND}`
+
+  const onSmiskiLoad = () => {
+    if (showSmiskiCollection) {
+      const element = document.getElementById("SMISKI Collection")
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
+  const onSmiskiClick = () => {
+    setShowSmiskiCollection(!showSmiskiCollection)
+  }
 
   const handleChange = () => {
     setIsDark(!isDark)
@@ -53,7 +69,7 @@ function App() {
         <Icon style={iconStyle} name='moon' size='large' />
       </div>
       <Suspense fallback={<ContentLoader />}>
-        <Intro theme={theme} />
+        <Intro theme={theme} onSmiskiClick={onSmiskiClick} />
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
@@ -65,10 +81,17 @@ function App() {
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
-        <Project theme={theme} />
+        <Project theme={theme} onSmiskiClick={onSmiskiClick} />
       </Suspense>
 
-      <SmiskiCollection />
+      {
+        showSmiskiCollection &&
+        <Suspense fallback={<ContentLoader />}>
+          <div onLoad={() => onSmiskiLoad()}>
+            <SmiskiCollection setShowSmiskiCollection={setShowSmiskiCollection} />
+          </div>
+        </Suspense>
+      }
 
       <Credit theme={theme} />
 

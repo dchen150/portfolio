@@ -44,7 +44,8 @@ const Description = styled.div`
     padding-bottom: 15px
 `
 
-function SmiskiCollection () {
+function SmiskiCollection (props) {
+    const { setShowSmiskiCollection } = props
     const theme = {
         CARD_BACKGROUND: COLOR.SMISKI_BACKGROUND_LIGHT_GREEN,
         TEXT_COLOR: COLOR.WHITE
@@ -71,14 +72,11 @@ function SmiskiCollection () {
     })
 
     const handleClose = () => {
-        const element = document.getElementById("SMISKI Collection")
-        if (element.style.display === 'block') {
-            element.style.display = 'none'
-        }
+        setShowSmiskiCollection(false)
     }
 
     return (
-        <Container id="SMISKI Collection" style={{ display: 'none'}}>
+        <Container id="SMISKI Collection">
             <Card theme={theme} padding={15}>
                 <FlexBox>
                     <Header theme={theme}>SMISKI Collection</Header>
