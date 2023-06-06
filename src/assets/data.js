@@ -31,7 +31,7 @@ import SmiskiBacchus from './smiskiBacchus.png'
 import SmiskiVelazquez from './smiskiVelazquez.png'
 import SmiskiDali from './smiskiDali.png'
 import SmiskiPearlEarring from './smiskiPearlEarring.png'
-import SmiskiScream from './smiskiScream.png'
+import SmiskiMuseumSecret from './smiskiMuseumSecret.png'
 import SmiskiUnderpants from './smiskiUnderpants.png'
 import SmiskiStruggling from './smiskiStruggling.png'
 import SmiskiLoosePants from './smiskiLoosePants.png'
@@ -53,6 +53,13 @@ import SmiskiOnYourSide from './smiskiOnYourSide.png'
 import SmiskiCheerleading from './smiskiCheerleading.png'
 import SmiskiCheering from './smiskiCheering.png'
 import SmiskiCheerSecret from './smiskiCheerSecret.png'
+import SmiskiReading from './smiskiReading.png'
+import SmiskiBeforeRest from './smiskiBeforeRest.png'
+import SmiskiSleepy from './smiskiSleepy.png'
+import SmiskiCoSleeping from './smiskiCoSleeping.png'
+import SmiskiSleep from './smiskiSleep.png'
+import SmiskiFussing from './smiskiFussing.png'
+import SmiskiMoon from './smiskiMoon.png'
 
 export const TYPING_TEXT = [
     {
@@ -127,6 +134,8 @@ export const CONTACT = [
 ]
 
 const SMISKI_WANT = "Looking to buy or trade."
+const YEN = '¥'
+const CAD = 'CAD'
 
 export const SMISKI_COLLECTION = [
     {
@@ -141,7 +150,7 @@ export const SMISKI_COLLECTION = [
                 weight: 25.4,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Researching",
@@ -152,7 +161,7 @@ export const SMISKI_COLLECTION = [
                 weight: 25.1,
                 weightUnit: 'g',
                 paidAmount: 0,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Presenting",
@@ -163,7 +172,7 @@ export const SMISKI_COLLECTION = [
                 weight: 32.4,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Good Idea",
@@ -174,7 +183,7 @@ export const SMISKI_COLLECTION = [
                 weight: 25.7,
                 weightUnit: 'g',
                 paidAmount: 0,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI On the Road",
@@ -185,7 +194,7 @@ export const SMISKI_COLLECTION = [
                 weight: 26.2,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "Little SMISKI Group Think",
@@ -196,7 +205,7 @@ export const SMISKI_COLLECTION = [
                 weight: 28.9,
                 weightUnit: 'g',
                 paidAmount: 1980,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI @ Work Secret",
@@ -223,7 +232,18 @@ export const SMISKI_COLLECTION = [
                 weight: 30.2,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
+            },
+            {
+                name: "SMISKI Dali",
+                isOwned: true,
+                icon: SmiskiDali,
+                isFavorite: true,
+                details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada. It felt like the lightest box out of all the selection.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 16.79,
+                paidCurrency: CAD
             },
             {
                 name: "SMISKI The Source",
@@ -256,18 +276,7 @@ export const SMISKI_COLLECTION = [
                 weight: null,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
-            },
-            {
-                name: "SMISKI Dali",
-                isOwned: false,
-                icon: SmiskiDali,
-                isFavorite: true,
-                details: "Painting depicting melting clocks. Original piece by Salvador Dalí.",
-                weight: null,
-                weightUnit: 'g',
-                paidAmount: null,
-                paidCurrency: null
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Pearl Earring",
@@ -281,11 +290,11 @@ export const SMISKI_COLLECTION = [
                 paidCurrency: null
             },
             {
-                name: "SMISKI Scream (Secret)",
+                name: "SMISKI Museum (Secret)",
                 isOwned: false,
-                icon: SmiskiScream,
+                icon: SmiskiMuseumSecret,
                 isFavorite: true,
-                details: `${SMISKI_WANT} Original piece by Edvard Munch.`,
+                details: SMISKI_WANT,
                 weight: null,
                 weightUnit: 'g',
                 paidAmount: null,
@@ -305,7 +314,7 @@ export const SMISKI_COLLECTION = [
                 weight: 26.3,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Struggling",
@@ -387,18 +396,18 @@ export const SMISKI_COLLECTION = [
                 weight: 31.6,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Daydreaming",
-                isOwned: false,
+                isOwned: true,
                 icon: SmiskiDaydreaming,
                 isFavorite: true,
-                details: SMISKI_WANT,
+                details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada. When shaking the box, it felt like the smiski moved around a lot more than the other boxes.",
                 weight: null,
                 weightUnit: 'g',
-                paidAmount: null,
-                paidCurrency: null
+                paidAmount: 16.79,
+                paidCurrency: CAD
             },
             {
                 name: "SMISKI Playing",
@@ -469,7 +478,7 @@ export const SMISKI_COLLECTION = [
                 weight: 32.8,
                 weightUnit: 'g',
                 paidAmount: 990,
-                paidCurrency: '¥'
+                paidCurrency: YEN
             },
             {
                 name: "SMISKI Cheering",
@@ -530,6 +539,88 @@ export const SMISKI_COLLECTION = [
                 name: "SMISKI Cheer (Secret)",
                 isOwned: false,
                 icon: SmiskiCheerSecret,
+                isFavorite: true,
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            }
+        ]
+    },
+    {
+        name: "Bed",
+        data: [
+            {
+                name: "SMISKI Reading",
+                isOwned: true,
+                icon: SmiskiReading,
+                isFavorite: true,
+                details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 16.79,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI before Rest",
+                isOwned: false,
+                icon: SmiskiBeforeRest,
+                isFavorite: true,
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            },
+            {
+                name: "SMISKI Sleepy",
+                isOwned: false,
+                icon: SmiskiSleepy,
+                isFavorite: false,
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            },
+            {
+                name: "SMISKI Co-Sleeping",
+                isOwned: false,
+                icon: SmiskiCoSleeping,
+                isFavorite: false,
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            },
+            {
+                name: "SMISKI at Sleep",
+                isOwned: false,
+                icon: SmiskiSleep,
+                isFavorite: false,
+                details: "BedGe",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            },
+            {
+                name: "SMISKI Fussing",
+                isOwned: false,
+                icon: SmiskiFussing,
+                isFavorite: false,
+                details: "MadGe",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            },
+            {
+                name: "SMISKI Moon (Secret)",
+                isOwned: false,
+                icon: SmiskiMoon,
                 isFavorite: true,
                 details: SMISKI_WANT,
                 weight: null,
