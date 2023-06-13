@@ -94,10 +94,10 @@ function SmiskiCollection (props) {
                     <br />
                     {Object.entries(acc).map((entry) => {
                         return (
-                            <>
+                            <div key={entry[0]}>
                                 {entry[0]}: {entry[1]}
                                 <br/>
-                            </>
+                            </div>
                         )
                     })}
                 </Description>

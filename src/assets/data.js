@@ -140,6 +140,8 @@ const CAD = 'CAD'
 export const SMISKI_COLLECTION = [
     {
         name: "@ Work",
+        weight: null,
+        weigthUnit: 'g',
         data: [
             {
                 name: "SMISKI Approving",
@@ -222,6 +224,8 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Museum",
+        weight: 13.5,
+        weightUnit: 'g',
         data: [
             {
                 name: "SMISKI Bacchus",
@@ -240,7 +244,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiDali,
                 isFavorite: true,
                 details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada. It felt like the lightest box out of all the selection.",
-                weight: null,
+                weight: 21.0,
                 weightUnit: 'g',
                 paidAmount: 16.79,
                 paidCurrency: CAD
@@ -273,7 +277,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiVelazquez,
                 isFavorite: true,
                 details: "Acquired May 18, 2023 @ Kiddy Land in Harajuku, Tokyo. Traded away for SMISKI Reseraching.",
-                weight: null,
+                weight: 25.8,
                 weightUnit: 'g',
                 paidAmount: 990,
                 paidCurrency: YEN
@@ -304,6 +308,8 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Dressing",
+        weight: null,
+        weightUnit: 'g',
         data: [
             {
                 name: "SMISKI Underpants",
@@ -386,6 +392,8 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Living",
+        weight: 14.2,
+        weightUnit: 'g',
         data: [
             {
                 name: "SMISKI Hiding",
@@ -404,7 +412,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiDaydreaming,
                 isFavorite: true,
                 details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada. When shaking the box, it felt like the smiski moved around a lot more than the other boxes.",
-                weight: null,
+                weight: 29.6,
                 weightUnit: 'g',
                 paidAmount: 16.79,
                 paidCurrency: CAD
@@ -468,6 +476,8 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Cheer",
+        weight: null,
+        weightUnit: 'g',
         data: [
             {
                 name: "SMISKI Dancing",
@@ -550,6 +560,8 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Bed",
+        weight: 14.5,
+        weightUnit: 'g',
         data: [
             {
                 name: "SMISKI Reading",
@@ -557,7 +569,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiReading,
                 isFavorite: true,
                 details: "Acquired June 5, 2023 @ Token Toys Metrotown in Vancouver, Canada.",
-                weight: null,
+                weight: 24.5,
                 weightUnit: 'g',
                 paidAmount: 16.79,
                 paidCurrency: CAD

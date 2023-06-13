@@ -9,6 +9,7 @@ const Container = styled.div`
 
 const FlexBox = styled.div`
     display: flex;
+    padding: 10px 0px;
 `
 
 const Card = styled.div`
@@ -20,7 +21,7 @@ const Card = styled.div`
 
 const Header = styled.h3`
     color: ${(props) => props.theme.TEXT_COLOR};
-    padding: 10px 10px;
+    padding-right: 10px;
     margin: 0px;
 `
 
@@ -69,8 +70,7 @@ const Description = styled.p`
 `
 
 const CountOwned = styled.h3`
-    margin: 0px 0px 0px auto;
-    padding: 10px 10px;
+    margin: 0px 10px 0px auto;
     color: ${(props) => props.theme.TEXT_COLOR};
 `
 
@@ -106,6 +106,11 @@ const Cost = styled.p`
     margin: 0px;
 `
 
+const BoxWeight = styled.p`
+    margin: 0px;
+    color: ${(props) => props.theme.TEXT_COLOR}
+`
+
 function SmiskiSeries (props) {
     const scrollable = useRef(null)
     const { series } = props
@@ -129,6 +134,7 @@ function SmiskiSeries (props) {
             <Card theme={theme}>
                 <FlexBox>
                     <Header theme={theme}>{series.name}</Header>
+                    <BoxWeight theme={theme}>{series.weight ? `(Box + Paper + Wrap Mass: ${series.weight} ${series.weightUnit})` : ''}</BoxWeight>
                     <CountOwned theme={theme}>{ownedSmiskis} / {totalSmiskis} owned</CountOwned>
                 </FlexBox>
 
@@ -138,7 +144,7 @@ function SmiskiSeries (props) {
                 <SmiskiContainer theme={theme} ref={scrollable}>
                     {series.data.map((smiski) => {
                         return (
-                            <SmiskiCard theme={theme}>
+                            <SmiskiCard key={smiski.name} theme={theme}>
                                 <ImgContainer>
                                     <SmiskiImg
                                         alt={smiski.name}

@@ -49,7 +49,7 @@ function Project (props) {
         <Container>
             <Card theme={theme} padding={30}>
                 <Header theme={theme}>Projects</Header>
-                {PROJECTS.map((project) => <DropDown theme={theme} item={project} />)}
+                {PROJECTS.map((project) => <DropDown key={project.name} theme={theme} item={project} />)}
                 <CollectionContainer>
                     <CallToAction theme={theme}>
                         Click Me!

@@ -182,10 +182,10 @@ function Experience (props) {
                     <SideBar theme={theme}>
                         <Header theme={theme}>{header}</Header>
                         {
-                            experiences.map((experience) => {
+                            experiences.map((experience, idx) => {
                                 const isSelected = currExperience === experience
                                 return (
-                                    <SideBarItem theme={theme} isSelected={isSelected} onClick={() => handleChange(experience.company)}>
+                                    <SideBarItem key={experience.company + idx} theme={theme} isSelected={isSelected} onClick={() => handleChange(experience.company)}>
                                         <SideBarLogo
                                             alt={experience.company}
                                             src={theme === DARK ? experience.dark : experience.light}
@@ -211,10 +211,10 @@ function Experience (props) {
                             </HeaderContainer>
                         </ExperienceHeaderContainer>
                         <ul>
-                            {currExperience.description.map((point) => <ListItem theme={theme}>{point}</ListItem>)}
+                            {currExperience.description.map((point) => <ListItem key={point} theme={theme}>{point}</ListItem>)}
                         </ul>
                         <div style={{ flexWrap: 'wrap', padding: '0px 0px 15px 40px', display: 'flex' }}>
-                            {currExperience.tags.map((tag) => <Tag theme={theme}>{tag}</Tag>)}
+                            {currExperience.tags.map((tag) => <Tag key={tag} theme={theme}>{tag}</Tag>)}
                         </div>
                     </ExperienceContent>
                 </FlexBox>

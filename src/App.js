@@ -23,9 +23,7 @@ function App() {
   const onSmiskiLoad = () => {
     if (showSmiskiCollection) {
       const element = document.getElementById("SMISKI Collection")
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
+      element?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
