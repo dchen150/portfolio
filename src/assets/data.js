@@ -60,6 +60,13 @@ import SmiskiCoSleeping from './smiskiCoSleeping.png'
 import SmiskiSleep from './smiskiSleep.png'
 import SmiskiFussing from './smiskiFussing.png'
 import SmiskiMoon from './smiskiMoon.png'
+import SmiskiDoingCrunches from './smiskiDoingCrunches.png'
+import SmiskiAerobics from './smiskiAerobics.png'
+import SmiskiBalance from './smiskiBalance.png'
+import SmiskiDumbbell from './smiskiDumbbell.png'
+import SmiskiHoop from './smiskiHoop.png'
+import SmiskiStretch from './smiskiStretch.png'
+import SmiskiBuff from './smiskiBuff.png'
 
 export const TYPING_TEXT = [
     {
@@ -138,6 +145,90 @@ const YEN = '¥'
 const CAD = 'CAD'
 
 export const SMISKI_COLLECTION = [
+    {
+        name: "Exercising",
+        weight: null,
+        weightUnit: 'g',
+        data: [
+            {
+                name: "SMISKI Balance",
+                isOwned: true,
+                icon: SmiskiBalance,
+                isFavorite: true,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Dumbbell",
+                isOwned: true,
+                icon: SmiskiDumbbell,
+                isFavorite: true,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Hoop",
+                isOwned: true,
+                icon: SmiskiHoop,
+                isFavorite: true,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Doing Crunches",
+                isOwned: true,
+                icon: SmiskiDoingCrunches,
+                isFavorite: false,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Aerobics",
+                isOwned: true,
+                icon: SmiskiAerobics,
+                isFavorite: false,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Stretch",
+                isOwned: true,
+                icon: SmiskiStretch,
+                isFavorite: false,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 0,
+                paidCurrency: CAD
+            },
+            {
+                name: "SMISKI Buff (Secret)",
+                isOwned: false,
+                icon: SmiskiBuff,
+                isFavorite: true,
+                details: SMISKI_WANT,
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
+            }
+        ]
+    },
     {
         name: "@ Work",
         weight: null,
@@ -232,7 +323,7 @@ export const SMISKI_COLLECTION = [
                 isOwned: true,
                 icon: SmiskiBacchus,
                 isFavorite: false,
-                details: "Acquired May 19, 2023 @ Kiddy Land in Harajuku, Tokyo. Greek God of wine.",
+                details: "Acquired May 19, 2023 @ Kiddy Land in Harajuku, Tokyo. Greek God of wine. Pulled a duplicate from a gift from a friend. Box doesn't have much vertical movement and has limited horizontal movement when shaking",
                 weight: 30.2,
                 weightUnit: 'g',
                 paidAmount: 990,
@@ -418,20 +509,20 @@ export const SMISKI_COLLECTION = [
                 paidCurrency: CAD
             },
             {
+                name: "SMISKI Nap Time",
+                isOwned: true,
+                icon: SmiskiNapTime,
+                isFavorite: true,
+                details: "Acquired July 7, 2023. Bought through Token Toys trading group chat.",
+                weight: null,
+                weightUnit: 'g',
+                paidAmount: 12.00,
+                paidCurrency: CAD
+            },
+            {
                 name: "SMISKI Playing",
                 isOwned: false,
                 icon: SmiskiPlaying,
-                isFavorite: true,
-                details: SMISKI_WANT,
-                weight: null,
-                weightUnit: 'g',
-                paidAmount: null,
-                paidCurrency: null
-            },
-            {
-                name: "SMISKI Nap Time",
-                isOwned: false,
-                icon: SmiskiNapTime,
                 isFavorite: true,
                 details: SMISKI_WANT,
                 weight: null,
@@ -476,7 +567,7 @@ export const SMISKI_COLLECTION = [
     },
     {
         name: "Cheer",
-        weight: null,
+        weight: 13.8,
         weightUnit: 'g',
         data: [
             {
@@ -489,6 +580,17 @@ export const SMISKI_COLLECTION = [
                 weightUnit: 'g',
                 paidAmount: 990,
                 paidCurrency: YEN
+            },
+            {
+                name: "SMISKI Cheerleading",
+                isOwned: true,
+                icon: SmiskiCheerleading,
+                isFavorite: false,
+                details: "Acquired June 27, 2023 via gift from friend (purchased in LA).",
+                weight: 29.9,
+                weightUnit: 'g',
+                paidAmount: null,
+                paidCurrency: null
             },
             {
                 name: "SMISKI Cheering",
@@ -518,7 +620,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiOnDrums,
                 isFavorite: false,
                 details: SMISKI_WANT,
-                weight: null,
+                weight: 30.5,
                 weightUnit: 'g',
                 paidAmount: null,
                 paidCurrency: null
@@ -529,17 +631,6 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiOnYourSide,
                 isFavorite: false,
                 details: "SMISKI is cheering for you :)",
-                weight: null,
-                weightUnit: 'g',
-                paidAmount: null,
-                paidCurrency: null
-            },
-            {
-                name: "SMISKI Cheerleading",
-                isOwned: false,
-                icon: SmiskiCheerleading,
-                isFavorite: false,
-                details: SMISKI_WANT,
                 weight: null,
                 weightUnit: 'g',
                 paidAmount: null,

@@ -181,7 +181,7 @@ function Intro (props) {
     useEffect(() => {
         const fetchRecentSong = async () => {
             let data = await fetch(
-                "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=derekc150&api_key=&format=json&limit=2",
+                "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=derekc150&api_key=bb2eb8c99413ef2694eb31690762a994&format=json&limit=2",
                 { method: 'GET' }
                 )
             data = await data.json()

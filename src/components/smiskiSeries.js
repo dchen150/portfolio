@@ -150,7 +150,7 @@ function SmiskiSeries (props) {
                                         alt={smiski.name}
                                         src={smiski.icon}
                                         isOwned={smiski.isOwned}
-                                        loading='lazy'
+                                        loading='eager'
                                     />
                                 </ImgContainer>
 
