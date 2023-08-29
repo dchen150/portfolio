@@ -224,7 +224,7 @@ function Intro (props) {
                     />
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
                 </AbsoluteFlexBox>
-                <TLDR theme={theme}>tldr: UBC BSc Computer Science Graduate | 2 years of SWE experience</TLDR>
+                {/* <TLDR theme={theme}>tldr: microsoft swe | UBC CS Graduate</TLDR> */}
                 <FlexBox>
                     {
                         CONTACT.map((platform) => {

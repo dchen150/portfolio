@@ -171,8 +171,8 @@ function Experience (props) {
     const { theme, experiences, header } = props
     const [currExperience, setCurrExperience] = useState(experiences[0])
 
-    const handleChange = (company) => {
-        setCurrExperience(experiences.find((experience) => experience.company === company))
+    const handleChange = (idx) => {
+        setCurrExperience(experiences[idx])
     }
 
     return (
@@ -185,7 +185,7 @@ function Experience (props) {
                             experiences.map((experience, idx) => {
                                 const isSelected = currExperience === experience
                                 return (
-                                    <SideBarItem key={experience.company + idx} theme={theme} isSelected={isSelected} onClick={() => handleChange(experience.company)}>
+                                    <SideBarItem key={experience.company + idx} theme={theme} isSelected={isSelected} onClick={() => handleChange(idx)}>
                                         <SideBarLogo
                                             alt={experience.company}
                                             src={theme === DARK ? experience.dark : experience.light}
@@ -207,7 +207,8 @@ function Experience (props) {
                             <HeaderContainer>
                                 <Header theme={theme}>{currExperience.title}</Header>
                                 <SubHeader theme={theme}>{currExperience.company}</SubHeader>
-                                <SubHeader theme={theme}>{getDateRange(currExperience)} {DOUBLE_SLASH} {getWorkDuration(currExperience)}</SubHeader>
+                                <SubHeader theme={theme}>{getDateRange(currExperience)}</SubHeader>
+                                {/* {DOUBLE_SLASH} {getWorkDuration(currExperience)} */}
                             </HeaderContainer>
                         </ExperienceHeaderContainer>
                         <ul>

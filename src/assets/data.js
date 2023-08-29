@@ -89,7 +89,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'ubc cs \'23 | prev swe intern @ meta, msft, huawei, sap',
+    'bio': 'software engineer @ microsoft | ubc cs \'23',
     'location': 'Vancouver, BC, Canada',
     'contact': {
         'email': 'derekc150@gmail.com',
@@ -147,7 +147,7 @@ const CAD = 'CAD'
 export const SMISKI_COLLECTION = [
     {
         name: "Exercising",
-        weight: null,
+        weight: 13.5,
         weightUnit: 'g',
         data: [
             {
@@ -156,7 +156,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiBalance,
                 isFavorite: true,
                 details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
-                weight: null,
+                weight: 27.4,
                 weightUnit: 'g',
                 paidAmount: 0,
                 paidCurrency: CAD
@@ -166,8 +166,8 @@ export const SMISKI_COLLECTION = [
                 isOwned: true,
                 icon: SmiskiDumbbell,
                 isFavorite: true,
-                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
-                weight: null,
+                details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift. Box only shakes at certain angles and might have a bulge.",
+                weight: 29.2,
                 weightUnit: 'g',
                 paidAmount: 0,
                 paidCurrency: CAD
@@ -178,7 +178,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiHoop,
                 isFavorite: true,
                 details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
-                weight: null,
+                weight: 33.3,
                 weightUnit: 'g',
                 paidAmount: 0,
                 paidCurrency: CAD
@@ -189,7 +189,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiDoingCrunches,
                 isFavorite: false,
                 details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
-                weight: null,
+                weight: 30.1,
                 weightUnit: 'g',
                 paidAmount: 0,
                 paidCurrency: CAD
@@ -211,7 +211,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiStretch,
                 isFavorite: false,
                 details: "Acquired July 26, 2023 @ Toyka Collectibles in Vancouver, Canada. Received as gift.",
-                weight: null,
+                weight: 29.1,
                 weightUnit: 'g',
                 paidAmount: 0,
                 paidCurrency: CAD
@@ -222,7 +222,7 @@ export const SMISKI_COLLECTION = [
                 icon: SmiskiBuff,
                 isFavorite: true,
                 details: SMISKI_WANT,
-                weight: null,
+                weight: 28.9,
                 weightUnit: 'g',
                 paidAmount: null,
                 paidCurrency: null
@@ -521,7 +521,7 @@ export const SMISKI_COLLECTION = [
             },
             {
                 name: "SMISKI Playing",
-                isOwned: false,
+                isOwned: true,
                 icon: SmiskiPlaying,
                 isFavorite: true,
                 details: SMISKI_WANT,
@@ -736,6 +736,19 @@ export const SMISKI_COLLECTION = [
 ]
 
 export const EXPERIENCES = [
+    {
+        title: 'Software Engineer',
+        company: 'Microsoft',
+        startTime: new Date('August 28, 2023'),
+        endTime: undefined,
+        location: 'Redmond, Washington, USA',
+        description: [
+            'Mobile and Commerce team - integrating AI and partnered products into Skype'
+        ],
+        light: Microsoft,
+        dark: Microsoft,
+        tags: ['C#', 'ASP.NET', 'TypeScript', 'React Native']
+    },
     {
         title: 'Software Engineer Intern',
         company: 'Meta',
