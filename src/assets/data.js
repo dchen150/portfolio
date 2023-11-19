@@ -89,8 +89,8 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'software engineer @ microsoft | ubc cs \'23',
-    'location': 'Vancouver, BC, Canada',
+    'bio': 'Software Engineer @ Microsoft | ubc cs \'23',
+    'location': 'Seattle, WA, USA',
     'contact': {
         'email': 'derekc150@gmail.com',
         'github': 'dchen150',
@@ -756,10 +756,10 @@ export const EXPERIENCES = [
         endTime: new Date('December 31, 2022'),
         location: 'Menlo Park, California, USA',
         description: [
-            'On the Facebook Creators: Wellbeing team that builds comment ranking and comment moderation tools',
+            'Facebook Creators: Wellbeing team 🧘🧠: builds comment ranking and content moderation tools',
             'Built full stack activity log for comment moderation as a creator; completing project 3 weeks ahead of schedule',
             'Added Hack/PHP backend APIs and corresponding React components to filter logs with date pickers, drop down menus, and search bars',
-            'Developed insights dashboard and APIs for millions of users to view essential moderation statistics'
+            'Stretch goals complete: developed insights dashboard and APIs/queries for millions of users to view essential moderation statistics'
         ],
         light: Meta,
         dark: Meta,
@@ -772,6 +772,7 @@ export const EXPERIENCES = [
         endTime: new Date('August 31, 2022'),
         location: 'Bellevue, Washington, USA',
         description: [
+            'Microsoft Deals team 🏷️💰: cashback and coupons',
             'Implemented gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximity – saving consumers $250 million annually',
             'Led design meetings with relevant stakeholders to identify corner cases and decide UX experience',
             'Integrated Upside cashback API into RESTful backend handling security concerns with 3rd party'
@@ -787,6 +788,7 @@ export const EXPERIENCES = [
         endTime: new Date('August 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
+            'Orbis Portfolio Systems 🤑💹: systems to manage large scale investments/portfolios',
             'Developed backend for global mutual fund management for company with $35+ billion of assets under management',
             'Built a job with to identify and compute Wash Sale Tax Rule in profit/loss report – considering several edge cases, saving accountants 100 hours annually and reducing risk of error by 30%',
             'Implemented scheduled SQL script to fetch and display fund structure',
@@ -803,6 +805,7 @@ export const EXPERIENCES = [
         endTime: new Date('April 1, 2021'),
         location: 'Vancouver, Canada',
         description: [
+            'Computer Networking R&D 🖧🌐: researching networking protocols',
             'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
             'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend which increased traffic flow efficiency by 23%',
             'Implemented REST APIs that convert YANG data model to XML, JSON, and Java'
@@ -818,7 +821,7 @@ export const EXPERIENCES = [
         endTime: new Date('December 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'HANA & Analytics - User Management, Licensing, Core UI',
+            'HANA & Analytics 👨‍👨‍👦‍👦: User Management, Licensing, Core UI',
             'Reduced runtime of external facing REST API by 30% by optimizing backend logic',
             'Designed and implemented data pipeline using Apache Airflow & Python for workflow management of more than 1 million users/clients',
             'Led the overhaul and redesign of regression autmoation tests written using Python, Selenium, and Jenkins which improved consistency by 80%',
@@ -853,7 +856,8 @@ export const COMMUNITY_PROJECTS = [
         endTime: new Date('May 31, 2023'),
         location: 'Vancouver, Canada',
         description: [
-            'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal using React, yarn, and Firebase Storage/Firestore',
+            'Pacific Northwestern\'s largest hackathon club 👨‍💻',
+            'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal',
             'Implemented a pipeline by writing scripts on Github Actions and Travis CI/CD that reduced regression'
         ],
         light: nwPlusDark,
@@ -867,10 +871,10 @@ export const COMMUNITY_PROJECTS = [
         endTime: new Date('June 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'Collaborated with stakeholders to optimize project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
-            'Managing a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
-            'Created a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
-            'Implemented infrastructure tools using React, Redux, JavaScript, and Node.js that allows executives to manage and create events 30% more efficiently'
+            'UBC\'s biggest technology club 💻',
+            'Led a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
+            'Created a unique digital experience - optimizing project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
+            'Built a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
         ],
         light: BizTech,
         dark: BizTechDark,
@@ -882,11 +886,12 @@ export const PROJECTS = [
     {
         name: 'Video Highlights Automation Tool',
         icon: null,
-        subHeader: 'command line tool',
-        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and give it all of the links to the relevant Youtube videos \n 4) a highlight video is generated to local storage',
-        tags: ['Python', 'moviepy', 'YoutubeDL'],
+        subHeader: 'command line tool // chrome extension',
+        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and give it all of the links to the relevant Youtube videos \n 4) a highlight video is generated to local storage \n\n It became tiring to manually comment Youtube comments so I also created a Chrome Extension to solve this problem (see attached Youtube video).',
+        tags: ['Python', 'moviepy', 'YoutubeDL', 'JavaScript'],
         links: {
             'github': 'https://github.com/Resocram/youtube_highlights',
+            'youtube': 'https://www.youtube.com/watch?v=LY5zRrqdXvk',
         }
     },
     {

@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 import Card from './card'
 import { DARK } from '../constants/theme'
-
-import moment from 'moment'
+import { getFormattedTimeDuration, getDateRange } from '../constants/utils'
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -120,52 +119,6 @@ const SideBarLogo = styled.img`
 const Company = styled.p``
 
 const DOUBLE_SLASH = '//'
-const SPACE = ' '
-
-function getDateRange(exp) {
-    if (exp.startTime) {
-        const startTime = exp.startTime
-        const startMonth = startTime.toLocaleString('en-US', { month: 'short' })
-        const startYear = startTime.getFullYear()
-        let res = startMonth + SPACE + startYear + " - "
-
-        if (exp.endTime) {
-            const endTime = exp.endTime
-            const endMonth = endTime.toLocaleString('en-US', { month: 'short' })
-            const endYear = endTime.getFullYear()
-            res += endMonth + SPACE + endYear
-        } else {
-            res += 'present'
-        }
-        return res
-    }
-    return ''
-}
-
-function getWorkDuration(exp) {
-    if (exp.startTime) {
-        const endTime = exp.endTime ? exp.endTime : new Date()
-        const startTime = exp.startTime
-        const momentStartTime = moment(`${startTime.getFullYear()}-${startTime.getMonth() + 1}-${startTime.getDay() + 1}`)
-        const momentEndTime = moment(`${endTime.getFullYear()}-${endTime.getMonth() + 1}-${endTime.getDay() + 1}`)
-        const duration = moment.duration(momentEndTime.diff(momentStartTime))
-        const durationMonths = duration.asMonths()
-        let MONTHS = Math.ceil(durationMonths)
-        MONTHS += durationMonths % 1 >= 0.8 ? 1 : 0
-
-        const durationYears = duration.asYears()
-        let YEARS = Math.floor(durationYears)
-        YEARS += durationYears % 1 >= 0.9 ? 1 : 0
-
-        if (YEARS >= 1) {
-            const surplusMonths = MONTHS - (YEARS * 12)
-            return YEARS + ' yrs ' + (surplusMonths > 0 ? surplusMonths + ' mos' : '')
-        } else {
-            return MONTHS > 0 ? MONTHS + ' mos' : '1 mo'
-        }
-    }
-    return ''
-}
 
 function Experience (props) {
     const { theme, experiences, header } = props
@@ -207,8 +160,12 @@ function Experience (props) {
                             <HeaderContainer>
                                 <Header theme={theme}>{currExperience.title}</Header>
                                 <SubHeader theme={theme}>{currExperience.company}</SubHeader>
-                                <SubHeader theme={theme}>{getDateRange(currExperience)}</SubHeader>
-                                {/* {DOUBLE_SLASH} {getWorkDuration(currExperience)} */}
+                                <SubHeader theme={theme}>
+                                    {getDateRange(currExperience.startTime, currExperience.endTime)}
+                                    {DOUBLE_SLASH}
+                                    {getFormattedTimeDuration(currExperience.startTime, currExperience.endTime)}
+                                </SubHeader>
+
                             </HeaderContainer>
                         </ExperienceHeaderContainer>
                         <ul>
