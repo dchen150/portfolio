@@ -58,7 +58,7 @@ const Hole = styled.div`
     border-radius: 24px;
 `
 
-export default function SoundTrack(props) {
+export default function SoundTrack() {
     const theme = useContext(ThemeContext)
     const [recentSong, setRecentSong] = useState(null)
 
