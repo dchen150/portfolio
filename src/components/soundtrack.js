@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styled, { keyframes } from 'styled-components'
+import ThemeContext from '../themeContext';
 
 const rotate = keyframes`
     from {
@@ -58,7 +59,7 @@ const Hole = styled.div`
 `
 
 export default function SoundTrack(props) {
-    const { theme } = props
+    const theme = useContext(ThemeContext)
     const [recentSong, setRecentSong] = useState(null)
 
     // https://github.com/spotify/web-api/issues/505
@@ -67,18 +68,18 @@ export default function SoundTrack(props) {
             let data = await fetch(
                 "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=derekc150&api_key=bb2eb8c99413ef2694eb31690762a994&format=json&limit=2",
                 { method: 'GET' }
-                )
+            )
             data = await data.json()
             if (data.recenttracks &&
                 data.recenttracks.track &&
                 data.recenttracks.track.length > 0) {
-                    const song = data.recenttracks.track[0]
-                    setRecentSong({
-                        name: song.name,
-                        artist: song.artist['#text'],
-                        songLink: song.url,
-                        img: song.image[2]['#text']
-                    })
+                const song = data.recenttracks.track[0]
+                setRecentSong({
+                    name: song.name,
+                    artist: song.artist['#text'],
+                    songLink: song.url,
+                    img: song.image[2]['#text']
+                })
             }
         }
         fetchRecentSong()

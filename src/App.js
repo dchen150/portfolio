@@ -6,6 +6,7 @@ import StyledContentLoader from 'styled-content-loader'
 import { LIGHT, DARK, COLOR } from './constants/theme'
 import { EXPERIENCES, COMMUNITY_PROJECTS } from './assets/data'
 import Credit from './components/credit'
+import { ThemeProvider } from './themeContext'
 
 const smiskiPromise = import('./components/smiskiCollection')
 
@@ -42,13 +43,13 @@ function App() {
   const ContentLoader = () => {
     return (
       <StyledContentLoader backgroundColor={theme.SIDE_BAR_BACKGROUND} foreGroundColor={theme.CARD_BACKGROUND}>
-        <div style={{ width: '700px', height: '200px', margin: '0 auto', marginBottom: '20px', borderRadius: '8px'}}></div>
+        <div style={{ width: '700px', height: '200px', margin: '0 auto', marginBottom: '20px', borderRadius: '8px' }}></div>
       </StyledContentLoader>
     )
   }
 
   return (
-    <div>
+    <ThemeProvider value={isDark ? DARK : LIGHT}>
       <div style={{ display: 'flex', float: 'right', margin: '10px' }}>
         <Icon style={iconStyle} name='sun' size='large' />
         <Switch
@@ -67,19 +68,19 @@ function App() {
         <Icon style={iconStyle} name='moon' size='large' />
       </div>
       <Suspense fallback={<ContentLoader />}>
-        <Intro theme={theme} onSmiskiClick={onSmiskiClick} />
+        <Intro onSmiskiClick={onSmiskiClick} />
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
-        <Experience theme={theme} experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
+        <Experience experiences={EXPERIENCES} header={'Where I\'ve Worked'} />
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
-        <Experience theme={theme} experiences={COMMUNITY_PROJECTS} header={'Community Projects'} />
+        <Experience experiences={COMMUNITY_PROJECTS} header={'Community Projects'} />
       </Suspense>
 
       <Suspense fallback={<ContentLoader />}>
-        <Project theme={theme} onSmiskiClick={onSmiskiClick} />
+        <Project onSmiskiClick={onSmiskiClick} />
       </Suspense>
 
       {
@@ -91,9 +92,9 @@ function App() {
         </Suspense>
       }
 
-      <Credit theme={theme} />
+      <Credit />
 
-    </div>
+    </ThemeProvider>
   )
 }
 

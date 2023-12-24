@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 
 import Card from './card'
 import DropDown from './dropdown'
 import { PROJECTS } from '../assets/data'
 import SmiskiLaptop from '../assets/smiskiLaptop.png'
+import ThemeContext from '../themeContext'
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -42,14 +43,15 @@ const CallToAction = styled.p`
     font-weight: bold;
 `
 
-function Project (props) {
-    const { theme, onSmiskiClick } = props
+function Project(props) {
+    const { onSmiskiClick } = props
+    const theme = useContext(ThemeContext)
 
     return (
         <Container>
             <Card theme={theme} padding={30}>
                 <Header theme={theme}>Projects</Header>
-                {PROJECTS.map((project) => <DropDown key={project.name} theme={theme} item={project} />)}
+                {PROJECTS.map((project) => <DropDown key={project.name} item={project} />)}
                 <CollectionContainer>
                     <CallToAction theme={theme}>
                         Click Me!
@@ -58,7 +60,7 @@ function Project (props) {
                         alt='SMISKI Researching'
                         src={SmiskiLaptop}
                         loading='lazy'
-                        onClick={() => {onSmiskiClick()}}
+                        onClick={() => { onSmiskiClick() }}
                     />
 
                 </CollectionContainer>
