@@ -743,7 +743,8 @@ export const EXPERIENCES = [
         endTime: undefined,
         location: 'Redmond, Washington, USA',
         description: [
-            'Mobile and Commerce team - integrating AI and partnered products into Skype'
+            'Mobile and Commerce team - integrating AI and partnered products into Skype',
+            'Full stack product development including mobile, desktop, web, and backend development'
         ],
         light: Microsoft,
         dark: Microsoft,
@@ -887,7 +888,7 @@ export const PROJECTS = [
         name: 'Video Highlights Automation Tool',
         icon: null,
         subHeader: 'command line tool // chrome extension',
-        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and give it all of the links to the relevant Youtube videos \n 4) a highlight video is generated to local storage \n\n It became tiring to manually comment Youtube comments so I also created a Chrome Extension to solve this problem (see attached Youtube video).',
+        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and specify what Youtube playlist URL the raw footage lives at \n 4) a highlight video is generated to local storage \n\n It became tiring to manually comment Youtube comments so I also created a Chrome Extension to solve this problem (see attached Youtube video).',
         tags: ['Python', 'moviepy', 'YoutubeDL', 'JavaScript'],
         links: {
             'github': 'https://github.com/Resocram/youtube_highlights',
