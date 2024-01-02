@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { Icon } from 'semantic-ui-react'
 import { SlideDown } from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
+import ThemeContext from '../themeContext'
 
 const Container = styled.div`
     padding: 10px 0px 10px 0px;
@@ -60,8 +61,9 @@ const Tag = styled.span`
     min-width: 0;
 `
 
-function DropDown (props) {
-    const { theme, item } = props
+function DropDown(props) {
+    const { item } = props
+    const theme = useContext(ThemeContext)
     const [showDropDown, setShowDropDown] = useState(false)
 
     const handleClick = () => {
@@ -111,10 +113,10 @@ function DropDown (props) {
                         <Content theme={theme}>
                             <Description theme={theme}>{item.description}</Description>
                             <FlexBox>
-                                <FlexBox style={{flexWrap: 'wrap', wordWrap: 'break-word'}}>
+                                <FlexBox style={{ flexWrap: 'wrap', wordWrap: 'break-word' }}>
                                     {item.tags.map((tag) => <Tag key={tag} theme={theme}>{tag}</Tag>)}
                                 </FlexBox>
-                                <FlexBox style={{marginLeft: 'auto'}}>
+                                <FlexBox style={{ marginLeft: 'auto' }}>
                                     <Icons />
                                 </FlexBox>
                             </FlexBox>

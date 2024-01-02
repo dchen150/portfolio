@@ -27,7 +27,7 @@ const Container = styled.div`
     padding: ${(props) => props.padding}px;
 `
 
-function Card (props) {
+function Card(props) {
     const {
         theme,
         children,

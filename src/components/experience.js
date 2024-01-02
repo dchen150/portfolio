@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 
 import Card from './card'
 import { DARK } from '../constants/theme'
 import { getFormattedTimeDuration, getDateRange } from '../constants/utils'
+import ThemeContext from '../themeContext'
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -29,7 +30,7 @@ const SideBar = styled.div`
     @media (min-width: 771px) {
         /* Styles for desktop screens */
         margin: 0 auto;
-        padding: 30px;
+        padding: 25px;
     }
     background-color: ${(props) => props.theme.SIDE_BAR_BACKGROUND};
     width: 30%;
@@ -120,8 +121,9 @@ const Company = styled.p``
 
 const DOUBLE_SLASH = '//'
 
-function Experience (props) {
-    const { theme, experiences, header } = props
+function Experience(props) {
+    const { experiences, header } = props
+    const theme = useContext(ThemeContext)
     const [currExperience, setCurrExperience] = useState(experiences[0])
 
     const handleChange = (idx) => {
