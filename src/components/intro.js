@@ -125,7 +125,7 @@ function Intro(props) {
 
     return (
         <Container>
-            <Card theme={theme} padding={30}>
+            <Card padding={30}>
                 <AbsoluteFlexBox>
                     <ProfilePicture src={Derek} alt='Derek' />
                     <LoopDiv>
@@ -147,7 +147,7 @@ function Intro(props) {
                     />
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
                 </AbsoluteFlexBox>
-                <TLDR theme={theme}>tldr: microsoft swe | interned @ meta, msft, huawei, sap</TLDR>
+                <TLDR theme={theme}>basically a nicer and more detailed linkedin</TLDR>
                 <FlexBox>
                     {
                         CONTACT.map((platform) => {
