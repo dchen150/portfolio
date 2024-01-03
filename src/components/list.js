@@ -4,6 +4,7 @@ import ThemeContext from '../themeContext'
 
 const Title = styled.h3`
     color: ${props => props.theme.TEXT};
+    margin: 2px 0px;
 `
 
 const ListItem = styled.li`
