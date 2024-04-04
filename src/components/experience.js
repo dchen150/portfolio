@@ -162,7 +162,7 @@ function Experience (props) {
                                 <SubHeader theme={theme}>{currExperience.company}</SubHeader>
                                 <SubHeader theme={theme}>
                                     {getDateRange(currExperience.startTime, currExperience.endTime)}
-                                    {DOUBLE_SLASH}
+                                    {` ${DOUBLE_SLASH} `}
                                     {getFormattedTimeDuration(currExperience.startTime, currExperience.endTime)}
                                 </SubHeader>
 
