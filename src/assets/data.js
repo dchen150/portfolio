@@ -735,6 +735,11 @@ export const SMISKI_COLLECTION = [
     }
 ]
 
+const CONTEXT_TITLE = "context"
+const TECHNICAL_TITLE = "technical"
+const IMPACT_TITLE = "impact"
+const LEARNINGS_TITLE = "learnings"
+
 export const EXPERIENCES = [
     {
         title: 'Software Engineer',
@@ -743,11 +748,47 @@ export const EXPERIENCES = [
         endTime: undefined,
         location: 'Redmond, Washington, USA',
         description: [
-            'Mobile and Commerce team - integrating AI and partnered products into Skype'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'Mobile and Commerce team - integrating AI and partnered products into Skype',
+                    'Primarily worked on AI image generation and AI curated news channels',
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Full stack product development including mobile, desktop, web, and backend development',
+                    'Worked with Microsoft Shopping partner to build a proof of concept of integrating shopping into Skype\'s interface',
+                    'Worked with MSN partner to integrate news channels into Skype\'s interface',
+                    'Sole engineer working on the AI image generation feature, spearheading product meetings, technical decisions, and communication with partners',
+                    'Developed the backend server that authorizes, validates, and generates AI images via Image Creator (DALL·E 3)',
+                    'Implemented and A/B tested several entry points for the feature on both desktop, mobile, tablet, and web',
+                    'Built the modal for the feature, including server-driven Image Generation Suggestions, dynamic loading screen to retain users, and image generation prompt input',
+                    'Heavy focus on making the image generation feature viral, implementing features such as sending, forwarding, deeplinks, and downloading to share'
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'Presented Shopping POC to CVP of Windows Web Experiences within the first week of work',
+                    'Introduced an entirely new stream of revenue to Skype with ads associated with news Channels',
+                    'Boost DAU with engaging image generation feature',
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'Being single-responsibility focussed',
+                    'Learned about integrating Web Views within apps - essentially a web browser hosted within a component of an app',
+                    'Electron and React Native framework',
+                    'Working between many timezones - Skype has many EU and PST engineers',
+                ]
+            }
         ],
         light: Microsoft,
         dark: Microsoft,
-        tags: ['C#', 'ASP.NET', 'TypeScript', 'React Native']
+        tags: ['C#', 'ASP.NET', 'TypeScript', 'React Native', 'Electron']
     },
     {
         title: 'Software Engineer Intern',
@@ -756,10 +797,39 @@ export const EXPERIENCES = [
         endTime: new Date('December 31, 2022'),
         location: 'Menlo Park, California, USA',
         description: [
-            'Facebook Creators: Wellbeing team 🧘🧠: builds comment ranking and content moderation tools',
-            'Built full stack activity log for comment moderation as a creator; completing project 3 weeks ahead of schedule',
-            'Added Hack/PHP backend APIs and corresponding React components to filter logs with date pickers, drop down menus, and search bars',
-            'Stretch goals complete: developed insights dashboard and APIs/queries for millions of users to view essential moderation statistics'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'Facebook Creators: Wellbeing team 🧘🧠: builds comment ranking and content moderation tools',
+                    'Intern project: Moderation Activity Log. This is a log that displays data analytics and automated moderation events (such as inappropriate images or text being blocked)',
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Full stack web and backend development',
+                    'Implemented backend APIs and declarative graph queries for filtering log activities',
+                    'Decoupled and extended legacy code',
+                    'Implement filtering components UI (e.g. date, type, search)',
+                    'Built UI of the log to be user-friendly, displaying comments and their corresponding deeplinks to the post',
+                    'Developed inights dashboard - building components from scratch, querying for data, and displaying stats to Facebook Creators'
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'Finished intern project and stretch goals 3 weeks ahead of schedule',
+                    'Improve Facebook Creator\'s experience and reducing the amount of time needed for comment moderation'
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'Big companies have a lot of internal tools to learn',
+                    'Effective communication with PM/Designer for product engineering',
+                    'Declarative graph queries was a very different experience from normal relational databases'
+                ]
+            }
         ],
         light: Meta,
         dark: Meta,
@@ -772,10 +842,38 @@ export const EXPERIENCES = [
         endTime: new Date('August 31, 2022'),
         location: 'Bellevue, Washington, USA',
         description: [
-            'Microsoft Deals team 🏷️💰: cashback and coupons',
-            'Implemented gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximity – saving consumers $250 million annually',
-            'Led design meetings with relevant stakeholders to identify corner cases and decide UX experience',
-            'Integrated Upside cashback API into RESTful backend handling security concerns with 3rd party'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'Microsoft Deals team 🏷️💰: cashback and coupons',
+                    `Intern project: Gas cashback feature on Microsoft Start mobile app allowing users to browse and claim cashback offers in their proximityGas cashback feature. `,
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Full stack mobile-web and backend development',
+                    'Developed a frontend that had many moving parts, including: map and list view to browse deals, informative pages on how to use the feature, ability to claim and check in at a gas station, display driving route and navigation from user\'s current location to selected gas station, first run experience',
+                    'Integrated Upside cashback API into RESTful backend handling security concerns with 3rd party',
+                    'Led design meetings with relevant stakeholders to identify corner cases and decide UX experience',
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'Saves consumers $250 million annually',
+                    'Adds a new stream of deals that drives traffic and revenue towards the app\'s deals hub',
+                    'Sole engineer working on the entire feature during the 12 week duration of the internship'
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'Effective communication with PM/Designer for product engineering',
+                    'How to section off work such that PRs can be as small as possible',
+                    'Drastically improved React understanding and comfortability',
+                ]
+            }
         ],
         light: Microsoft,
         dark: Microsoft,
@@ -788,11 +886,38 @@ export const EXPERIENCES = [
         endTime: new Date('August 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'Orbis Portfolio Systems 🤑💹: systems to manage large scale investments/portfolios',
-            'Developed backend for global mutual fund management for company with $35+ billion of assets under management',
-            'Built a job with to identify and compute Wash Sale Tax Rule in profit/loss report – considering several edge cases, saving accountants 100 hours annually and reducing risk of error by 30%',
-            'Implemented scheduled SQL script to fetch and display fund structure',
-            'Worked with an accountant to design and develop a diagnostics dashboard, reducing manual checking time from 1hr to 5 min'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'Orbis Portfolio Systems 🤑💹: systems to manage large scale investments/portfolios',
+                    'Orbis Investments is a global mutual fund with $35+ billion of assets under management',
+                    'Intern project: Automate the computation of Wash Sale Tax Rule in profit/loss reports for accountants',
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Built SQL queries to fetch and join the transactions executed by specified portfolios',
+                    'Implemented an algorithm to identify and compute Wash Sale Tax Rule considering several edge cases',
+                    'Developed scheduled SQL script to fetch and display fund structure',
+                    'Worked closely alongside accountants to design and develop a diagnostic dashboard'
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'Automating the manual computation of wash sales saves accountants 100 hours annually and significantly reduces the risk of error',
+                    'Diagnostic dashboard reduced the time it takes to manually verify the job from 1 hour to 5 mins',
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'Stronger understanding of relational databases',
+                    'What EC2 servers are',
+                    'A small glimpse of accounting at a large scale'
+                ]
+            }
         ],
         light: Orbis,
         dark: OrbisDark,
@@ -805,10 +930,35 @@ export const EXPERIENCES = [
         endTime: new Date('April 1, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'Computer Networking R&D 🖧🌐: researching networking protocols',
-            'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
-            'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend which increased traffic flow efficiency by 23%',
-            'Implemented REST APIs that convert YANG data model to XML, JSON, and Java'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'Computer Networking R&D 🖧🌐: researching networking protocols',
+                    'Worked on a team that researched and built POCs related to the YANG protocol',
+                    'YANG protocol: a data modelling language used to describe the configuration and state data of network devices'
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Directly architected and modified an open-source project to develop a microservice that extracts a subtree and its dependencies from tree/graph structure for internal YANG development tool',
+                    'Built and configured NGINX reverse proxy with load balancing to handle real time socket connection between frontend and backend',
+                    'Implemented REST APIs that convert YANG data model to XML, JSON, and Java'
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'NGINX reverse proxy: increased traffic flow efficiency by 23%'
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'First glimpse into some networking protocols',
+                    'Exploring open source repositories in depth'
+                ]
+            }
         ],
         light: HuaweiLight,
         dark: HuaweiDark,
@@ -821,11 +971,37 @@ export const EXPERIENCES = [
         endTime: new Date('December 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'HANA & Analytics 👨‍👨‍👦‍👦: User Management, Licensing, Core UI',
-            'Reduced runtime of external facing REST API by 30% by optimizing backend logic',
-            'Designed and implemented data pipeline using Apache Airflow & Python for workflow management of more than 1 million users/clients',
-            'Led the overhaul and redesign of regression autmoation tests written using Python, Selenium, and Jenkins which improved consistency by 80%',
-            'Increased reliability in unit tests by mocking database calls and refactoring JavaScript production code'
+            {
+                title: CONTEXT_TITLE,
+                points: [
+                    'HANA & Analytics 👨‍👨‍👦‍👦: User Management, Licensing, Core UI',
+                    'In the first half of the internship, focussed on improving the team\'s flaky end-to-end tests',
+                    'In the second half of the internship, began to explore various tickets across the team\'s many services'
+                ]
+            },
+            {
+                title: TECHNICAL_TITLE,
+                points: [
+                    'Led the overhaul and redesign of regression autmoation tests written using Python, Selenium, and Jenkins',
+                    'Reduced runtime of external facing REST API by 30% by optimizing backend logic',
+                    'Implemented REST APIs that convert YANG data model to XML, JSON, and Java',
+                    'Designed and implemented data pipeline using Apache Airflow & Python for workflow management of more than 1 million users/clients',
+                    'Increased reliability in unit tests by mocking database calls and refactoring JavaScript production code'
+                ]
+            },
+            {
+                title: IMPACT_TITLE,
+                points: [
+                    'There had been a large build up of code debt for the e2e tests and they would often timeout or be broken. The overhaul and refactor of these tests improved consistency by 80%'
+                ]
+            },
+            {
+                title: LEARNINGS_TITLE,
+                points: [
+                    'Understanding of the differentiation between unit, integration, and e2e tests as well as their roles in software development',
+                    'First time diving into such a large code base'
+                ]
+            }
         ],
         light: SAP,
         dark: SAP,
@@ -838,8 +1014,13 @@ export const EXPERIENCES = [
         endTime: new Date('April 31, 2023'),
         location: 'Vancouver, Canada',
         description: [
-            'Led programming labs for over 100 students, explaning programming concepts in Java including OOP, writing tests (JUnit), design patterns, and type hierarchies',
-            'Guided students with semester-long personal projects that applies SOLID design principles and GUI Development (JavaFX)'
+            {
+                title: undefined,
+                points: [
+                    'Led programming labs for over 100 students, explaning programming concepts in Java including OOP, writing tests (JUnit), design patterns, and type hierarchies',
+                    'Guided students with semester-long personal projects that applies SOLID design principles and GUI Development (JavaFX)'
+                ]
+            },
         ],
         light: UBC,
         dark: UBCDark,
@@ -856,9 +1037,14 @@ export const COMMUNITY_PROJECTS = [
         endTime: new Date('May 31, 2023'),
         location: 'Vancouver, Canada',
         description: [
-            'Pacific Northwestern\'s largest hackathon club 👨‍💻',
-            'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal',
-            'Implemented a pipeline by writing scripts on Github Actions and Travis CI/CD that reduced regression'
+            {
+                title: undefined,
+                points: [
+                    'Pacific Northwestern\'s largest hackathon club 👨‍💻',
+                    'Developed websites that allow execs to manage hackathons, event websites, and application evaluation portal',
+                    'Implemented a pipeline by writing scripts on Github Actions and Travis CI/CD that reduced regression'
+                ]
+            },
         ],
         light: nwPlusDark,
         dark: nwPlusDark,
@@ -871,10 +1057,15 @@ export const COMMUNITY_PROJECTS = [
         endTime: new Date('June 31, 2021'),
         location: 'Vancouver, Canada',
         description: [
-            'UBC\'s biggest technology club 💻',
-            'Led a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
-            'Created a unique digital experience - optimizing project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
-            'Built a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
+            {
+                title: undefined,
+                points: [
+                    'UBC\'s biggest technology club 💻',
+                    'Led a team of 8 developers for a React/Redux web app with tasks involving development, collaboration with design and marketing teams, and onboarding',
+                    'Created a unique digital experience - optimizing project scope and timeline, resulting in being awarded UBC\'s CUS Innovation Award ',
+                    'Built a custom API on a serverless backend by leveraging cloud tools such as AWS Lambda, DynamoDB, API Gateway, and S3 buckets',
+                ]
+            },
         ],
         light: BizTech,
         dark: BizTechDark,
@@ -887,7 +1078,7 @@ export const PROJECTS = [
         name: 'Video Highlights Automation Tool',
         icon: null,
         subHeader: 'command line tool // chrome extension',
-        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and give it all of the links to the relevant Youtube videos \n 4) a highlight video is generated to local storage \n\n It became tiring to manually comment Youtube comments so I also created a Chrome Extension to solve this problem (see attached Youtube video).',
+        description: 'I like to record when my friends and I play sports together using my GoPro. It became repetitive to use a video editing software to clip highlights from the raw footage and add music. \n\n The flow of the script is as follows: \n 1) upload all your raw footage to Youtube \n 2) comment on the Youtube video in a specific format (e.g. $c 1:32-1:40) to indicate what highlight and what visual effect is to be added to the highlight \n 3) run the script and specify what Youtube playlist URL the raw footage lives at \n 4) a highlight video is generated to local storage \n\n It became tiring to manually comment Youtube comments so I also created a Chrome Extension to solve this problem (see attached Youtube video).',
         tags: ['Python', 'moviepy', 'YoutubeDL', 'JavaScript'],
         links: {
             'github': 'https://github.com/Resocram/youtube_highlights',

@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 
 import Card from './card'
 import { DARK } from '../constants/theme'
 import { getFormattedTimeDuration, getDateRange } from '../constants/utils'
+import ThemeContext from '../themeContext'
+import List from './list'
 
 const Container = styled.div`
     @media (max-width: 770px) {
@@ -29,7 +31,7 @@ const SideBar = styled.div`
     @media (min-width: 771px) {
         /* Styles for desktop screens */
         margin: 0 auto;
-        padding: 30px;
+        padding: 25px;
     }
     background-color: ${(props) => props.theme.SIDE_BAR_BACKGROUND};
     width: 30%;
@@ -76,10 +78,6 @@ const SubHeader = styled.p`
     margin: 0px;
 `
 
-const ListItem = styled.li`
-    color: ${(props) => props.theme.TEXT}
-`
-
 const ExperienceHeaderContainer = styled.div`
     display: flex;
     align-items: center;
@@ -111,8 +109,8 @@ const SideBarItem = styled.div`
 `
 
 const SideBarLogo = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin: 0px 4px;
 `
 
@@ -120,8 +118,9 @@ const Company = styled.p``
 
 const DOUBLE_SLASH = '//'
 
-function Experience (props) {
-    const { theme, experiences, header } = props
+function Experience(props) {
+    const { experiences, header } = props
+    const theme = useContext(ThemeContext)
     const [currExperience, setCurrExperience] = useState(experiences[0])
 
     const handleChange = (idx) => {
@@ -130,7 +129,7 @@ function Experience (props) {
 
     return (
         <Container>
-            <Card theme={theme}>
+            <Card>
                 <FlexBox>
                     <SideBar theme={theme}>
                         <Header theme={theme}>{header}</Header>
@@ -168,9 +167,12 @@ function Experience (props) {
 
                             </HeaderContainer>
                         </ExperienceHeaderContainer>
-                        <ul>
-                            {currExperience.description.map((point) => <ListItem key={point} theme={theme}>{point}</ListItem>)}
-                        </ul>
+
+                        <div style={{ marginLeft: 10, marginRight: 10 }}>
+                            {currExperience.description.map((description) => <List key={description} description={description} />)}
+                        </div>
+
+                        {/* technology tags */}
                         <div style={{ flexWrap: 'wrap', padding: '0px 0px 15px 40px', display: 'flex' }}>
                             {currExperience.tags.map((tag) => <Tag key={tag} theme={theme}>{tag}</Tag>)}
                         </div>

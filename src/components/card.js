@@ -4,6 +4,8 @@ import {
     TABLET,
     DESKTOP
 } from './../constants/theme'
+import { useContext } from 'react'
+import ThemeContext from '../themeContext'
 
 const Container = styled.div`
     @media ${MOBILE} {
@@ -27,14 +29,19 @@ const Container = styled.div`
     padding: ${(props) => props.padding}px;
 `
 
-function Card (props) {
+function Card(props) {
     const {
-        theme,
         children,
         height,
         width,
         padding
     } = props
+
+    let theme = useContext(ThemeContext);
+
+    if (props.theme) {
+        theme = props.theme;
+    }
 
     return (
         <Container

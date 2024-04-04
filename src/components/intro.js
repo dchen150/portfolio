@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styled, { keyframes, css } from 'styled-components'
 import ReactJson from 'react-json-view'
 import { Icon } from 'semantic-ui-react'
@@ -12,6 +12,7 @@ import { COLOR } from '../constants/theme'
 import Loop from './loop'
 import Card from './card'
 import SoundTrack from './soundtrack'
+import ThemeContext from '../themeContext'
 
 // Define the animation keyframes
 const slideOut = keyframes`
@@ -109,8 +110,9 @@ const SmiskiPeekingSlideout = styled.img`
     }
 `
 
-function Intro (props) {
-    const { theme, onSmiskiClick } = props
+function Intro(props) {
+    const { onSmiskiClick } = props
+    const theme = useContext(ThemeContext)
     const [isHovered, setIsHovered] = useState(false)
 
     const handleHover = () => {
@@ -123,11 +125,11 @@ function Intro (props) {
 
     return (
         <Container>
-            <Card theme={theme} padding={30}>
+            <Card padding={30}>
                 <AbsoluteFlexBox>
-                    <ProfilePicture src={Derek} alt='Derek'/>
+                    <ProfilePicture src={Derek} alt='Derek' />
                     <LoopDiv>
-                        <Loop typingText={TYPING_TEXT} theme={theme} />
+                        <Loop typingText={TYPING_TEXT} />
                     </LoopDiv>
                     <Smiski
                         alt='SMISKI Researching'
@@ -135,7 +137,7 @@ function Intro (props) {
                         loading='lazy'
                         onMouseEnter={handleHover}
                         onMouseLeave={handleHoverEnd}
-                        onClick={() => {onSmiskiClick()}}
+                        onClick={() => { onSmiskiClick() }}
                     />
                     <SmiskiPeekingSlideout
                         alt='SMISKI Peeking'
@@ -145,7 +147,7 @@ function Intro (props) {
                     />
                     <ResumeButton href={Resume} target="_blank" rel="noopener noreferrer">Resume</ResumeButton>
                 </AbsoluteFlexBox>
-                <TLDR theme={theme}>tldr: microsoft swe | interned @ meta, msft, huawei, sap</TLDR>
+                <TLDR theme={theme}>basically a nicer and more detailed linkedin</TLDR>
                 <FlexBox>
                     {
                         CONTACT.map((platform) => {
@@ -157,7 +159,7 @@ function Intro (props) {
                         })
                     }
                 </FlexBox>
-                <SoundTrack theme={theme} />
+                <SoundTrack />
                 <ReactJson
                     src={BIO_INFO}
                     theme='monokai'

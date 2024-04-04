@@ -37,7 +37,7 @@ export function getFormattedTimeDuration(startDate, endDate) {
             years--
         }
         const surplusMonths = totalMonths - (years * 12)
-        return years + ' yrs ' + (surplusMonths > 0 ? surplusMonths + ' mos' : '')
+        return (years > 0 ? years + ' yrs ' : '') + (surplusMonths > 0 ? surplusMonths + ' mos' : '')
     }
     return totalMonths > 0 ? totalMonths + ' mos' : '1 mo'
 }
