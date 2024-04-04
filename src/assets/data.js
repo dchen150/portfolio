@@ -743,9 +743,27 @@ const LEARNINGS_TITLE = "learnings"
 export const EXPERIENCES = [
     {
         title: 'Software Engineer',
+        company: 'Meta',
+        startTime: new Date('March 25, 2024'),
+        endTime: undefined,
+        location: 'Vancouver, Canada',
+        description: [
+            {
+                title: undefined,
+                points: [
+                    'Data Infra for AI: Metastore'
+                ]
+            },
+        ],
+        light: Meta,
+        dark: Meta,
+        tags: ['Java', 'Python']
+    },
+    {
+        title: 'Software Engineer',
         company: 'Microsoft',
         startTime: new Date('August 28, 2023'),
-        endTime: undefined,
+        endTime: new Date('March 22, 2024'),
         location: 'Redmond, Washington, USA',
         description: [
             {
@@ -758,6 +776,7 @@ export const EXPERIENCES = [
             {
                 title: TECHNICAL_TITLE,
                 points: [
+                    'Migration of legacy service for downloading Skype binaries into a monorepo - initializing the projects middleware and routing to support several domains/hosts',
                     'Full stack product development including mobile, desktop, web, and backend development',
                     'Worked with Microsoft Shopping partner to build a proof of concept of integrating shopping into Skype\'s interface',
                     'Worked with MSN partner to integrate news channels into Skype\'s interface',
@@ -774,6 +793,7 @@ export const EXPERIENCES = [
                     'Presented Shopping POC to CVP of Windows Web Experiences within the first week of work',
                     'Introduced an entirely new stream of revenue to Skype with ads associated with news Channels',
                     'Boost DAU with engaging image generation feature',
+                    'Reduce on-call load by migrating and improving legacy Downloads service'
                 ]
             },
             {
