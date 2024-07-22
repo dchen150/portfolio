@@ -89,7 +89,7 @@ export const TYPING_TEXT = [
 
 export const BIO_INFO = {
     'name': 'Derek Chen',
-    'bio': 'Software Engineer @ Microsoft | ubc cs \'23',
+    'bio': 'Software Engineer @ Meta | ubc cs \'23',
     'location': 'Seattle, WA, USA',
     'contact': {
         'email': 'derekc150@gmail.com',
@@ -106,7 +106,8 @@ export const BIO_INFO = {
         'hiking',
         'skiing',
         'making videos',
-        'volleyball'
+        'volleyball',
+        'biking',
     ],
     'interests': [
         'keyboards',
@@ -751,7 +752,7 @@ export const EXPERIENCES = [
             {
                 title: undefined,
                 points: [
-                    'Data Infra for AI: Metastore'
+                    'Data Infra for AI: Data Warehouse Metadata'
                 ]
             },
         ],
